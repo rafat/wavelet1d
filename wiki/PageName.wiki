@@ -208,7 +208,7 @@ int main() {
             string nm; // nm will store the name of Wavelet Family
             cin >> nm;
             cout << "Enter the name of signal file at the Prompt eg., signal.txt :" << endl;
-            char inp[50];
+            char {{{inp[50]}}};
             cin >> inp;
             vector<double> sig;
             ifstream sig_inp(inp);
@@ -244,8 +244,8 @@ int main() {
 
             cout <<" Recon signal size" << output.size() << endl;
             for (unsigned int i = 0; i < output.size(); i++){
-                sig1 << output[i] << endl;
-                diff << output[i] - original[i] << endl;
+                sig1 << {{{output[i]}}} << endl;
+                diff << {{{output[i] - original[i]}}} << endl;
 
             }
             gnudwtplot(J);
