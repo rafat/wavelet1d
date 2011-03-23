@@ -181,7 +181,8 @@ Generates GNUPLOT script gnudwt.gnu.txt that contains plots of signals, filters 
 
 A sample code for DWT/IDWT for a given signal is given below. The signal used is "Piecewise-Regular" function from Stanford University's Matlab Wavelab Toolbox.
 
-{{{#include <iostream>
+<pre>
+#include <iostream>
 #include <fstream>
 #include "wave1d.h"
 #include <vector>
@@ -249,7 +250,7 @@ int main() {
             }
             gnudwtplot(J);
             return 0;
-}}}
+</pre>
 
 
 
