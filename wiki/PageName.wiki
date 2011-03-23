@@ -191,7 +191,7 @@ A sample code for DWT/IDWT for a given signal is given below. The signal used is
 using namespace std;
 
 int main() {
-        cout << "********J- LEVEL DISCRETE WAVELET TRANSFORM IMPLEMENTATION*********" << endl; // prints
+        cout << "********J- LEVEL DISCRETE WAVELET TRANSFORM IMPLEMENTATION*********" << endl;
             cout << "This program accepts signal from the user in a file format " << endl;
             cout << "and performs Discrete Wavelet Transform with specified   " << endl;
             cout << "wavelet. "                                               << endl;
