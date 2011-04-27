@@ -9,7 +9,7 @@
 
 #include <iostream>
 #include <fstream>
-#include "wave1d.h"
+#include "wavelet.h"
 #include <vector>
 #include <string>
 #include <cmath>
