@@ -1,10 +1,16 @@
 //============================================================================
-// Name        : imagedemo_sym.cpp
+// Name        : imagedemo_sym2.cpp
 // Author      : Rafat Hussain
 // Version     :
 // Copyright   : 
-// Description :Image Approximation using symmetric extension DWT
+// Description : Image Approximation using symmetric extension 2D DWT
 //============================================================================
+
+// IMPORTANT - Algorithm used to display Image is imprecise because of int 8 overflow issues
+// and it shouldn't be used to judge the performance of the DWT. The DWT and IDWT outputs
+// should be used for performance measurements. I have used maximum value rescaling to
+// solve overflow issues and , obviously, it is going to result in suboptimal performance but
+// it is good enough for demonstration purposes.
 
 #include <iostream>
 #include <fstream>
@@ -226,7 +232,8 @@ int main() {
 
 	idwt_2d_sym( dwt_coef1,flag, nm, idwt_output,length);
 
-
+    double max1;
+    maxval(idwt_output,max1);
 
 	//Displaying Reconstructed Image
 
@@ -239,10 +246,15 @@ int main() {
 	cout << idwt_output.size() << idwt_output[0].size() << endl;
 	dvImg = cvCreateImage( dvSize, 8, 1 );
 
-	for (int i = 0; i < dvSize.height; i++ )
-		for (int j = 0; j < dvSize.width; j++ )
+	for (int i = 0; i < dvSize.height; i++ ){
+		for (int j = 0; j < dvSize.width; j++ ){
+	   		  if ( idwt_output[i][j] <= 0.0){
+	   			  idwt_output[i][j] = 0.0;
+	   		  }
 			((uchar*)(dvImg->imageData + dvImg->widthStep*i))[j] =
-					(char) (idwt_output[i][j])  ;
+					(char) ((idwt_output[i][j] / max1) * 255 ) ;
+		}
+	}
 
 	cvNamedWindow( "10% Coeff Reconstructed Image", 1 ); // creation of a visualisation window
 	cvShowImage( "10% Coeff Reconstructed Image", dvImg ); // image visualisation
@@ -293,6 +305,9 @@ int main() {
 
 		idwt_2d_sym( dwt_coef2,flag, nm, idwt_output2,length);
 
+		double max2;
+		    maxval(idwt_output2,max2);
+
 
 
 		//Displaying Reconstructed Image
@@ -306,10 +321,15 @@ int main() {
 		cout << idwt_output2.size() << idwt_output2[0].size() << endl;
 		dvImg2 = cvCreateImage( dvSize2, 8, 1 );
 
-		for (int i = 0; i < dvSize2.height; i++ )
-			for (int j = 0; j < dvSize2.width; j++ )
+		for (int i = 0; i < dvSize2.height; i++ ) {
+			for (int j = 0; j < dvSize2.width; j++ ) {
+		   		  if ( idwt_output2[i][j] <= 0.0){
+		   			  idwt_output2[i][j] = 0.0;
+		   		  }
 				((uchar*)(dvImg2->imageData + dvImg2->widthStep*i))[j] =
-						(char) (idwt_output2[i][j])  ;
+						(char) ((idwt_output2[i][j]/ max2) * 255 ) ;
+			}
+		}
 
 		cvNamedWindow( "2% Coeff Reconstructed Image", 1 ); // creation of a visualisation window
 		cvShowImage( "2% Coeff Reconstructed Image", dvImg2 ); // image visualisation
