@@ -3,7 +3,7 @@
 // Author      : Rafat Hussain
 // Version     :
 // Copyright   : 
-// Description :
+// Description : DWT of arbitrary size image using symmetric extension
 //============================================================================
 
 #include <iostream>
