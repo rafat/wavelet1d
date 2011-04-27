@@ -3,7 +3,7 @@
 // Author      : Rafat Hussain
 // Version     :
 // Copyright   : 
-// Description :
+// Description :Image Approximation using symmetric extension DWT
 //============================================================================
 
 #include <iostream>
