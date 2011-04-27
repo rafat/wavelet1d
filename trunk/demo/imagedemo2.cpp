@@ -3,7 +3,7 @@
 // Author      : Rafat Hussain
 // Version     :
 // Copyright   : 
-// Description : Image Approximation
+// Description : Image Approximation using OPENCV and dwt_2d/idwt_2d functions
 //============================================================================
 
 #include <iostream>
