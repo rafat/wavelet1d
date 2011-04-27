@@ -3,8 +3,14 @@
 // Author      : Rafat Hussain
 // Version     :
 // Copyright   : 
-// Description : Image Approximation using OPENCV and dwt_2d/idwt_2d functions
+// Description : Image Approximation
 //============================================================================
+
+// IMPORTANT - Algorithm used to display Image is imprecise because of int 8 overflow issues
+// and it shouldn't be used to judge the performance of the DWT. The DWT and IDWT outputs
+// should be used for performance measurements. I have used maximum value rescaling to
+// solve overflow issues and , obviously, it is going to result in suboptimal performance but
+// it is good enough for demonstration purposes.
 
 #include <iostream>
 #include <fstream>
@@ -94,7 +100,7 @@ int main() {
  	 string nm = "db3";
  	 // Finding DWT output dimensions as the DWT output is zeropadded
      dwt_output_dim(vec1, rr1, cc1 );
- 	int J = 6;
+ 	int J = 5;
  	vector<double> flag;
     vector<vector<double> >  dwt_output(rr1, vector<double>(cc1));
     cout << rr1 << cc1 << "size of op" << endl;
@@ -200,6 +206,9 @@ int main() {
 
     	   zero_remove(vec1,final);
 
+    	    double max1;
+    	    maxval(final,max1);
+
     	   //Displaying Reconstructed Image
 
     	   IplImage *dvImg;
@@ -210,10 +219,15 @@ int main() {
 
     	   dvImg = cvCreateImage( dvSize, 8, 1 );
 
-    	      for (int i = 0; i < dvSize.height; i++ )
-    	      for (int j = 0; j < dvSize.width; j++ )
+    	      for (int i = 0; i < dvSize.height; i++ ) {
+    	      for (int j = 0; j < dvSize.width; j++ ){
+    	   		  if ( final[i][j] <= 0.0){
+    	   			  final[i][j] = 0.0;
+    	   		  }
     	          ((uchar*)(dvImg->imageData + dvImg->widthStep*i))[j] =
-    	          (char) (final[i][j]) ;
+    	          (char) ((final[i][j]/max1) * 255) ;
+    	      }
+    	      }
 
     		  cvNamedWindow( "10% Coeff Reconstructed Image", 1 ); // creation of a visualisation window
     	       cvShowImage( "10% Coeff Reconstructed Image", dvImg ); // image visualisation
@@ -261,6 +275,8 @@ int main() {
     		 	   // Removing Zeropadding
 
     		 	   zero_remove(vec1,final2);
+    		 	   double max2;
+    		 	   maxval(final2,max2);
 
     		 	   //Displaying Reconstructed Image
 
@@ -272,10 +288,15 @@ int main() {
 
     		 	   dvImg2 = cvCreateImage( dvSize2, 8, 1 );
 
-    		 	      for (int i = 0; i < dvSize2.height; i++ )
-    		 	      for (int j = 0; j < dvSize2.width; j++ )
+    		 	      for (int i = 0; i < dvSize2.height; i++ ) {
+    		 	      for (int j = 0; j < dvSize2.width; j++ ){
+    			   		  if ( final2[i][j] <= 0.0){
+    			   			  final2[i][j] = 0.0;
+    			   		  }
     		 	          ((uchar*)(dvImg2->imageData + dvImg2->widthStep*i))[j] =
-    		 	          (char) (final2[i][j]) ;
+    		 	          (char) ((final2[i][j]/ max2)* 255) ;
+    		 	      }
+    		 	      }
 
     		 		  cvNamedWindow( "2% Coeff Reconstructed Image", 1 ); // creation of a visualisation window
     		 	       cvShowImage( "2% Coeff Reconstructed Image", dvImg2 ); // image visualisation
