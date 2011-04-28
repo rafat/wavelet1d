@@ -353,6 +353,46 @@ Example Usage: *upsamp2(vec1,vec2,rows_up,cols_up)*
 
 *vec1* is the input, *rows_up* and *cols_up* are row and column upsampling factors. *vec2* is the upsampled matrix.
 
+= 2D Symmetric Extension DWT Functions =
+
+=== 28. J-Level Symmetric Extension 2D DWT ===
+
+*{{{void* dwt_2d_sym(vector<vector<double> > &, int , string , vector<double> &, vector<double> & ,vector<int> &, int )}}}*
+
+Example Usage: *dwt_2d_sym(vec1,J,nm,output,flag,length,e)*
+
+*vec1* Input Image/Matrix
+
+*J* Number of Decomposition Levels
+
+*nm* Wavelet Name
+
+*flag* Stores values for IDWT function
+
+*output* 1D vector that stores the output in the following format
+*{{{[A(J) D(J) D(J-1) ..... D(1)]}}}*
+
+where *A(J)* is the approximation coefficient vector at the Jth level while *D(n)* are the detail coefficient vectors at the nth level. It is important to remember that approximation and detail coefficients are actually two dimensional so we need a length vector that stores rows and columns values of each coefficient element. The length vector is given by *length*.
+
+For example, the first element of *output* vector is the approximation matrix stored as a vector and the first two elements of *length* vectors are row and column values of the approximation matrix. In other words, a 300 element approximation matrix ( 15 rows X 20 columns) can be extracted from the 300 element approximation vector.
+
+*e* is the length of symmetric extension in all directions.
+
+A code fragment sample is as following
+
+{{{
+ 	string nm = "db4";
+
+	// Finding 2D DWT Transform of the image using symmetric      extension algorithm
+	// Extension is set to 3 (eg., int e = 3)
+
+	vector<int> length;
+	vector<double> output,flag;
+	int J =3;
+	int e=3;
+	dwt_2d_sym(vec1,J,nm,output,flag,length,e);
+}}}
+
 
 
 
