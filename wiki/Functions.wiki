@@ -305,6 +305,22 @@ Example Usage: *dwt_output_dim(vec1, rr1, cc1 )*
 
 Because of zero-padding, the output image may not be equal in size to the input image. This function returns the dimensions of output matrix. If you are using dyadic length image then output will have the same dimensions as the input. This function works only with *dwt_2d* functions and not with other DWT implementations.
 
+=== 22. 2D Zeropad Removal ===
+
+*{{{void* zero_remove(vector<vector<double> > &,vector<vector<double> > &) }}}
+
+Example Usage: *zero_remove(vec1,final)*
+
+*vec1* is the input signal while *final* is the zeropadded IDWT output. *zero_remove* will remove zeros based on the size of the input image/matrix.
+
+=== 23. Get 2D DWT coefficients at level N ===
+
+*{{{void* getcoeff2d(vector<vector<double> > &, vector<vector<double> > &,vector<vector<double> > &,vector<vector<double> > &,vector<double> &, int &)}}}*
+
+Example Usage: *getcoeff2d(dwtoutput,cH,cV,cD,flag,N)*
+
+Given 2D DWT output *dwtoutput* and the Nth level of decomposition, *getcoeff2d* will return the three detail coefficients at the Nth level of decomposition. Works only with *dwt_2d* function.
+
 
 
 
