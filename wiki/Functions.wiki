@@ -464,5 +464,21 @@ and
 
   There are ,obviously, other ways to display the DWT output. A more precise and more efficient way could be to display output separately at each level instead of trying to bruteforce them into one image.
 
+= 2D Stationary Wavelet Transform Functions =
 
+=== 32. J-Level 2D Stationary Wavelet Transform === 
 
+*{{{void* swt_2d(vector<vector<double> > &,int , string , vector<double> &)}}}*
+
+Example Usage: *swt_2d(vec1,J,nm,output)*
+
+*output* is a 1D vector which is exactly equal to 1D DWT output vector of *dwt_2d_sym* except that in this case all coefficients are of same size. If *vec1* isn't a 2^M X 2^ M image/matrix , it will be zeropadded to dyadic dimensions with rows = columns.
+
+For example, a 3 level decomposition of 256X256 image yields 10 256X256 sets of coefficients - one approximation coefficient set at level 3 and three detail coefficients at each level.
+
+https://lh6.googleusercontent.com/_TwtGvT0Ma-0/Tbnv_x4dUbI/AAAAAAAAACk/9tvLG_-iZb4/apprx.jpg
+
+_Approximation Coefficients at J=3_
+
+https://lh3.googleusercontent.com/_TwtGvT0Ma-0/TbnvFEiRhpI/AAAAAAAAACc/doxXP9gpcl0/s512/detail.jpg
+_Detail Coefficients at levels 3,2,1 respectively_ 
