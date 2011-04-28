@@ -378,7 +378,7 @@ For example, the first element of *output* vector is the approximation matrix st
 
 *e* is the length of symmetric extension in all directions.
 
-A code fragment sample is as following
+A code fragment is as following
 
 {{{
  	string nm = "db4";
@@ -392,6 +392,27 @@ A code fragment sample is as following
 	int e=3;
 	dwt_2d_sym(vec1,J,nm,output,flag,length,e);
 }}}
+
+This DWT implementation works on image/matrices of any size and no dyadic zero padding is required.
+
+=== 29. J-Level Symmetric Extension 2D IDWT ===
+
+*{{{void* idwt_2d_sym(vector<double>  &,vector<double> &, string ,vector<vector<double> > &,vector<int> &)}}}*
+
+Example Usage: *idwt_2d_sym(dwt_output,flag, nm, idwt_output,length)*
+
+*idwt_output* will have the same dimensions as the input image/matrix.
+
+{{{
+ 	// Finding IDWT
+
+	vector<vector<double> > idwt_output(rows, vector<double>(cols));// rows and cols are the rows and columns of the input image/matrix
+
+	idwt_2d_sym( output,flag, nm, idwt_output,length);
+}}}
+
+ For more on other arguments, see 28.
+
 
 
 
