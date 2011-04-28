@@ -70,9 +70,13 @@ It zeropads signal sig such that its length is now dyadic. For example a signal 
 
 ===4. Convolution===
 
+Recommended -- *{{{double convfft(vector<double> &, vector<double> &, vector<double> &)}}}* 
+
+*-or-*
+
 *{{{double convol(vector<double> &, vector<double> &, vector<double> &)}}}*
 
-Example Usage: *convol(signal,lpd,cA_undec)*
+Example Usage: *convfft(signal,lpd,cA_undec)*
 
 where, signal and lpd are two inputs that are convolved and the convolution output is stored in cA_undec. All three are {{{vector<double>}}} objects.
 
