@@ -289,6 +289,24 @@ Example Usage: *idwt_2d(dwt_output,flag, nm ,idwt_output)*
  zero_remove(vec1,final);// vec1 is the input image/matrix
 }}}
 
+=== 20. 2D Dyadic Zero Padding ===
+
+*{{{void* dyadic_zpad_2d(vector<vector<double> > &,vector<vector<double> > &)}}}*
+
+Example Usage: *dyadic_zpad_2d(sig,sig2)*
+
+This function makes the signal of dyadic length by adding zeros. In this particular DWT implementation *dwt_2d*, the output *sig2* will be a NXN matrix which may require a lot of zeros being padded to the signal. It may be desirable to use *dwt_2d_sym* function in this case which operates on images/matrices of any size without any zero-padding.
+
+=== 21. Get Output Dimension ===
+
+*{{{void* dwt_output_dim(vector<vector<double> >&, int &, int & )}}}*
+
+Example Usage: *dwt_output_dim(vec1, rr1, cc1 )*
+
+Because of zero-padding, the output image may not be equal in size to the input image. This function returns the dimensions of output matrix. If you are using dyadic length image then output will have the same dimensions as the input. This function works only with *dwt_2d* functions and not with other DWT implementations.
+
+
+
 
 
 
