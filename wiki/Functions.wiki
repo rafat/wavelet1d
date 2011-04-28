@@ -182,3 +182,11 @@ Same as *dwt* function except it contains two more arguments and the output is a
 *{{{[A(J) D(J) D(J-1) ..... D(1)]}}}*
 
  where *A(J)* is the approximation coefficient vector at the Jth level while *D(n)* are the detail coefficient vectors at the nth level. *length* contains the lengths of corresponding vectors. Last entry of the *length* vector is the length of the original signal.
+
+=== 12. J-Level Symmetric Extension IDWT===
+
+*{{{void* idwt_sym(vector<double> &,vector<double> &, string,vector<double> &, vector<int> &);}}}*
+
+Example Usage: *idwt_sym(dwtop,flag,nm,idwt_output,length) *
+
+*idwt_sym* is identical to *idwt* above except that it contains one more argument in lengths of the coefficients vector *length*. It is the same vector described in *11*.
