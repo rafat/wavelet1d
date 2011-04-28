@@ -1,5 +1,4 @@
-#summary One-sentence summary of this page.
-
+#summary List of Functions
 = 1D Functions =
 
 ===1. J-Level Discrete Wavelet Transform===
@@ -167,6 +166,10 @@ Generates GNUPLOT script gnudwt.gnu.txt that contains plots of signals, filters 
 
         
 
+= 1D Symmetric Extension DWT Functions =
 
+===11. J-Level Symmetric Extension DWT===
 
-= Details =
+*{{{void* dwt_sym(vector<double> &, int ,string , vector<double> &,vector<double> &,vector<int> &, int );}}}*
+
+Example Usage: *dwt_sym signal, J,nm, dwt_output, flag,length, e)*
