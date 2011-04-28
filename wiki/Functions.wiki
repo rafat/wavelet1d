@@ -483,3 +483,26 @@ _Approximation Coefficients at J=3 (256X256 Image)_
 https://lh3.googleusercontent.com/_TwtGvT0Ma-0/TbnvFEiRhpI/AAAAAAAAACc/doxXP9gpcl0/s640/detail.jpg
 
 _Detail Coefficients at levels 3,2,1 respectively (768X768 image shown as 640X640)_ 
+
+=== 33. 2D Periodic Extension ===
+
+*{{{void per_ext2d(vector<vector<double> > &,vector<vector<double> > &, int )}}}*
+
+Example Usage: *per_ext2d(origsig,sig, ext)*
+
+*origsig* is the original signal, *sig* is the extended signal. It is extended by integer value *ext* in all directions.
+
+= FFT Functions =
+
+*{{{void* fft(vector<complex<double> > &,int ,unsigned int)}}}*
+
+Example Usage: *fft(inp,1,N) -or- fft(inp,-1,N)*
+
+*fft* performs in-place FFT operation on complex vector *inp*.
+
+Second argument is 1 for forward FFT and -1 for Inverse FFT.
+
+Third argument gives the length of the output. If N is larger than the length of *inp* then it will be zeropadded, FFT will be performed and N-length complex output will be returned.
+
+
+
