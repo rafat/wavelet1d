@@ -337,7 +337,21 @@ Example Usage: *idwt2(nm,idwt_output, cA, cH,cV,cD)*
 
 This is the exact inverse of *dwt2* function. Inputs are the four approximation and detail coefficients while the output is the singke stage *idwt_output*.
 
+=== 26. 2D Downsampling ===
 
+*{{{void* downsamp2(vector<vector<double> > &,vector<vector<double> > &, int, int)}}}*
+
+Example Usage: *downsamp2(vec1,vec2,rows_dn,cols_dn)*
+
+*vec1* is the input, *rows_dn* and *cols_dn* are row and column downsampling factors. *vec2* is the downsampled matrix.
+
+=== 27. 2D Upsampling ===
+
+*{{{void* upsamp2(vector<vector<double> > &,vector<vector<double> > &, int, int)}}}*
+
+Example Usage: *upsamp2(vec1,vec2,rows_up,cols_up)*
+
+*vec1* is the input, *rows_up* and *cols_up* are row and column upsampling factors. *vec2* is the upsampled matrix.
 
 
 
