@@ -321,6 +321,24 @@ Example Usage: *getcoeff2d(dwtoutput,cH,cV,cD,flag,N)*
 
 Given 2D DWT output *dwtoutput* and the Nth level of decomposition, *getcoeff2d* will return the three detail coefficients at the Nth level of decomposition. Works only with *dwt_2d* function.
 
+=== 24. 1-Level 2D DWT ===
+
+*{{{void* dwt2(string ,vector<vector<double> > &, vector<vector<double> >  &,vector<vector<double> >  &, vector<vector<double> > &, vector<vector<double> > &)}}}*
+
+Example Usage: *dwt2(nm,sig,cA,cH,cV,cD)*
+
+Given a 2D signal *sig* and wavelet name *nm*, *dwt2* will return the approximation(*cA*) and detail coefficients(*cH,cV,cD*) after 1 level of decomposition.
+
+=== 25. 1-Level 2D IDWT ===
+
+*{{{void* idwt2(string ,vector<vector<double> > &, vector<vector<double> >  &,vector<vector<double> >  &, vector<vector<double> >  &, vector<vector<double> > &)}}}*
+
+Example Usage: *idwt2(nm,idwt_output, cA, cH,cV,cD)*
+
+This is the exact inverse of *dwt2* function. Inputs are the four approximation and detail coefficients while the output is the singke stage *idwt_output*.
+
+
+
 
 
 
