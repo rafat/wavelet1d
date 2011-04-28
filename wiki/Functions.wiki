@@ -80,6 +80,8 @@ Example Usage: *convfft(signal,lpd,cA_undec)*
 
 where, signal and lpd are two inputs that are convolved and the convolution output is stored in cA_undec. All three are {{{vector<double>}}} objects.
 
+Important- *convfft* will not modify the value of signal while convol will. I have not corrected this as *convfft* is the faster, better implementation and should be used instead of *convol*.
+
 ===5. Filter Coefficients===
 
 *{{{int filtcoef(string , vector<double> &, vector<double> &, vector<double> &, vector<double> &)}}}*
