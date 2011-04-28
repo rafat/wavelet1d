@@ -247,3 +247,27 @@ https://lh5.googleusercontent.com/_TwtGvT0Ma-0/Tbk_OaFazJI/AAAAAAAAABI/N9CQwURPJ
 DWT output vector should be straightforward.
 
 3. 2D Stationary Wavelet Transform. Inverse Stationary Transform is not implemented as of yet but 2d SWT should be good for image analysis, pattern recognition and edge detection operations that don't require ISWT for the most part.
+
+=== 18. J-Level 2D Discrete Wavelet Transform===
+
+*{{{void* dwt_2d(vector<vector<double> > &, int , string , vector<vector<double> > &, vector<double> &)}}}*
+
+Example Usage: *dwt_2d(vec1, J, nm, dwt_output,flag )*
+
+*vec1* is the 2D input signal.
+
+*J* is the Decomposition level.
+
+*nm* gives the name of wavelet family. See *filtcoef* for more details.
+
+*dwt_output* is the 2D output coefficients. They are arranged as shown in the figure above. The dimensions can be obtained by using *dwt_output_dim* function. A code fragment may look like this-
+ {{{
+  int rr1,cc1;
+  string nm = "db4";
+  // Finding DWT output dimensions as the DWT output is zeropadded
+  dwt_output_dim(vec1, rr1, cc1 );
+  int J = 2;
+  vector<double> flag;
+  vector<vector<double> >  dwt_output(rr1, vector<double>(cc1));
+  // Computing 2d DWT ( vec1is the signal while dwt_output is the DWT   output)
+  dwt_2d(vec1, J, nm, dwt_output,flag );}}}
