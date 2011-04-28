@@ -504,5 +504,11 @@ Second argument is 1 for forward FFT and -1 for Inverse FFT.
 
 Third argument gives the length of the output. If N is larger than the length of *inp* then it will be zeropadded, FFT will be performed and N-length complex output will be returned.
 
+=== 34. Frequency Response ===
 
+*{{{void* freq(vector<double> &, vector<double> &)}}}*
+
+Example Usage: *freq(sig,fre_oup)*
+
+This function returns frequency response *fre_oup* of signal *sig*. The function will also output a freq.dat file that can be directly plotted in GNUPLOT.
 
