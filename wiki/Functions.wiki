@@ -454,6 +454,7 @@ and
 	// size of DWT ( rows_n by cols_n)
 
 	int siz = length2.size();
+        // The last two values of length2 vector give the dimensions of the DWT output.
 	int rows_n=length2[siz-2];
 	int cols_n = length2[siz-1];
 
@@ -462,8 +463,6 @@ and
 }}}
 
   There are ,obviously, other ways to display the DWT output. A more precise and more efficient way could be to display output separately at each level instead of trying to bruteforce them into one image.
-
-
 
 
 
