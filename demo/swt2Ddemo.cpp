@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : swt2Dproject.cpp
+// Name        : swt2Ddemo.cpp
 // Author      : Rafat Hussain
 // Version     :
 // Copyright   : 
