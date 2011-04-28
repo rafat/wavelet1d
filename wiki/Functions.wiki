@@ -1,0 +1,172 @@
+#summary One-sentence summary of this page.
+
+= 1D Functions =
+
+===1. J-Level Discrete Wavelet Transform===
+*{{{void* dwt(vector<double> &, int ,string , vector<double> &, vector<double> &)}}}*
+
+Example Usage : *dwt(sig, J, nm, dwt_output,flag )*
+
+where,
+
+*sig :* is the input signal . It is a {{{vector<double>}}} object.
+
+*J :* Number of DWT Levels. Integer.
+
+*nm :* Name of Wavelet. See function filtcoef for more information. String.
+
+*dwt_ouput:* is a {{{vector<double>}}} object that will return the DWT output.
+
+*flag:* is a vector that contains two {{{vector<double>}}} values.
+
+{{{flag[0]}}} - contains the number of zeros if the signal is zeropadded.
+
+{{{flag[1]}}}- contains the number of decomposition levels. (J)
+
+flag is used by IDWT to help process the DWT output.
+
+Additional Outputs : In addition to above, the function also generates .txt and .dat files.
+
+GNUPLOT ready .dat files
+
+*gnusig.dat :* contains signal data
+
+*gnufilt.dat:* Contains filters data.[All Four filters are arranged columnwise in the file]
+
+*gnuout.dat :* Contains DWT coefficients. It stores approximation and detail coefficients columnwise in alternating fashion. For example, three level of approximation and detail coefficients will result in gnuout.dat having 7 columns. First column is index followed by alternating approximation and detail columns.
+
+Text Files : These two files are used by the code to generate gnuout.dat file.
+
+*appx.txt :* Values of Approximation Coefficients from each stage. Values are appended after each stage.
+
+*det.txt :* Values of Detail Coefficients after each stage. Values are likewise appended after each stage.
+
+*dwtout.txt:* Stores the DWT ouput in text format. It contains Approximation coefficients at Jth level, followed by detail coefficients at Jthe, J-1,.... level 1.
+
+*flag.txt:* Contains values of flags in text format.
+
+===2. 1-Level Discrete Wavelet Transform===
+
+*{{{void* dwt1(string, vector<double> &, vector<double> &, vector<double> &)}}}*
+
+Example Usage: *dwt1(nm,sig, appx_sig, det_sig)*
+
+*nm :* Wavelet Name. String
+
+*sig :* Input Signal. {{{Vector<double>}}} Object.
+
+*appx_sig:* Approximation Coefficients. {{{Vector<double>}}} object.
+
+*det_sig:* Detail Coefficients. {{{Vector<double>}}} object.
+
+Same Functionality can be achieved by setting J=1 in the dwt function but dwt1 directly outputs detail and approximation coefficients for one level of decomposition. This function will not generate any of GNUPLOT files but may be preferable in any number of scenarios.
+
+===3. Dyadic Zero-Padding===
+
+*{{{void* dyadic_zpad_1d(vector<double> &)}}}*
+
+Example Usage: *dyadic_zpad_1d(sig)*
+
+It zeropads signal sig such that its length is now dyadic. For example a signal with length 195 will be zeropadded to 256.
+
+===4. Convolution===
+
+*{{{double convol(vector<double> &, vector<double> &, vector<double> &)}}}*
+
+Example Usage: *convol(signal,lpd,cA_undec)*
+
+where, signal and lpd are two inputs that are convolved and the convolution output is stored in cA_undec. All three are {{{vector<double>}}} objects.
+
+===5. Filter Coefficients===
+
+*{{{int filtcoef(string , vector<double> &, vector<double> &, vector<double> &, vector<double> &)}}}*
+
+Example Usage: *filtcoef(nm,lpd,hpd,lpr,hpr)*
+
+*nm:* Wavelet name.
+
+*lpd:* Low Pass Decomposition Filter Coefficients.
+
+*hpd:* High Pass Decomposition Filter Coefficients.
+
+*lpr:* Low Pass Reconstruction Filter Coefficients.
+
+*hpr:* High Pass Reconstruction Filter Coefficients.
+
+All filters are {{{vector<double>}}} objects and can be obtained by specifying the wavelet name. Currently, following Wavelets are available:
+
+Daubechies : db1,db2,.., ,db15
+
+Biorthogonal: bior1.1 ,bior1.3 ,bior1.5 ,bior2.2 ,bior2.4 ,bior2.6 ,bior2.8 ,bior3.1 ,bior3.3 ,bior3.5 ,bior3.7 ,bior3.9 ,bior4.4 ,bior5.5 ,bior6.8
+
+Coiflets: coif1,coif2,coif3,coif4,coif5
+
+===6. Downsampling===
+
+*{{{void downsamp(vector<double> &, int , vector<double> &)}}}*
+
+Example Usage : *downsamp(cA_undec, D, cA)*
+
+*cA_undec:* Signal to be downsampled. {{{Vector<double>}}}
+
+*D :* Downsampling Factor. Integer
+
+*cA:* Downsampled Signal. {{{Vector<double>}}}
+
+===7. Upsampling===
+
+*{{{void upsamp(vector<double> &, int, vector<double> &)}}}*
+
+Example Usage : *upsamp(cA, U, cA_up)*
+
+*cA:* Signal to be upsampled. {{{Vector<double>}}}
+
+*U :* Upsampling Factor. Integer
+
+*cA_up:* Upsampled Signal. {{{Vector<double>}}}
+
+===8. J-Level Inverse Discrete Wavelet Transform===
+
+*{{{void* idwt(vector<double> &,vector<double> &, string , vector<double> &)}}}*
+
+Example Usage: *idwt(dwt_output, flag,nm,output)*
+
+*dwt_output:* Output of DWT which serves as Input to the IDWT. {{{vector<double>}}}
+
+*flag:* Contains values of J and zeropadding. {{{vector<double>}}}
+
+*nm :* Wavelet name. String
+
+*output:* Reconstructed IDWT Output. {{{vector<double>}}}
+
+Additional .dat output
+
+*gnurecon.dat :* GNUPLOT ready reconstructed signal.
+
+===9. 1-Level Inverse Discrete Wavelet Transform===
+
+*{{{void* idwt1(string wname, vector<double> &, vector<double> &, vector<double> &)}}}*
+
+Example Usage : *idwt1(nm,idwt_output, app,detail)*
+
+*nm:* Wavelet Name.
+
+*idwt_output:* Outputs IDWT.
+
+*app:* Approximation Coefficients.
+
+*detail:* Detail Coefficients.
+
+===10. GNUDWTPLOT===
+
+*{{{void* gnudwtplot(int)}}}*
+
+Example Usage: *gnudwtplot(J)*
+
+Generates GNUPLOT script gnudwt.gnu.txt that contains plots of signals, filters and wavelet coefficients. it works if it is called following DWT and IDWT operations. To draw the plots, just load the script in gnuplot. See wavedemo1.cpp for more details.
+
+        
+
+
+
+= Details =
