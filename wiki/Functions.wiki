@@ -215,4 +215,22 @@ This function works on dyadic length signal. All the coefficients are of equal l
 
 *{{{void* iswt(vector<double> &,int , string, vector<double> &)}}}*
 
-Example Usage: 
+Example Usage: *iswt(swtop,J,nm,iswt_output)*
+
+*swtop* is the output of SWT stage , J - number of levels and nm is the wavelet as before. Output of ISWT is stored in *iswt_output* vector.
+
+=== 16. GNUSWTPLOT ===
+
+*{{{void* gnuswtplot(int)}}}*
+
+Example Usage: *gnuswtplot(J)*
+
+Generates GNUPLOT script gnudwt.gnu.txt that contains plots of signals, filters and wavelet coefficients. it works if it is called following SWT and ISWT operations. To draw the plots, just load the script in gnuplot.
+
+=== 17. 1D Periodic Extension ===
+
+*{{{void* per_ext(vector<double> &, int )}}}*
+
+Example Usage: *per_ext(sig,a)*
+
+*per_ext* periodically extends the signal *sig* by value *a* in either direction.
