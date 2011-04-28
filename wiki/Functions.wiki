@@ -478,7 +478,8 @@ For example, a 3 level decomposition of 256X256 image yields 10 256X256 sets of 
 
 https://lh6.googleusercontent.com/_TwtGvT0Ma-0/Tbnv_x4dUbI/AAAAAAAAACk/9tvLG_-iZb4/apprx.jpg
 
-_Approximation Coefficients at J=3_
+_Approximation Coefficients at J=3 (256X256 Image)_
 
-https://lh3.googleusercontent.com/_TwtGvT0Ma-0/TbnvFEiRhpI/AAAAAAAAACc/doxXP9gpcl0/s512/detail.jpg
-_Detail Coefficients at levels 3,2,1 respectively_ 
+https://lh3.googleusercontent.com/_TwtGvT0Ma-0/TbnvFEiRhpI/AAAAAAAAACc/doxXP9gpcl0/s640/detail.jpg
+
+_Detail Coefficients at levels 3,2,1 respectively (768X768 image shown as 640X640)_ 
