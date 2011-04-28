@@ -413,7 +413,55 @@ Example Usage: *idwt_2d_sym(dwt_output,flag, nm, idwt_output,length)*
 
  For more on other arguments, see 28.
 
+=== 30. 2D Symmetric Extension ===
 
+*{{{void symm_ext2d(vector<vector<double> > &,vector<vector<double> > &, int )}}}*
+
+Example Usage: *symm_ext2d(origsig,sig, ext)*
+
+*origsig* is the original signal, *sig* is the extended signal. It is extended by integer value *ext* in all directions.
+
+=== 31. Additional dwt_2d_sym Functions ===
+
+*{{{void* dispDWT(vector<double> &,vector<vector<double> > &, vector<int> &, vector<int> &, int )}}}*
+
+and
+
+*{{{void* dwt_output_dim_sym(vector<int> &,vector<int> &, int )}}}*
+
+ As we mentioned previously,DWT output of symmetric extension 2D DWT is a one dimensional vector. Additionally, the output isn't of dyadic length across different decomposition levels which makes the rectangular display of DWT output image a bit challenging and imprecise. *dispDWT* and *dwt_output_dim_sym* are two functions that are used to return a rectangular set of coefficients arranged to display the DWT in traditional format. A code fragment that computes symmetric DWT and then rearranges coefficients is shown next
+
+{{{
+        string nm = "db4";
+
+	// Finding 2D DWT Transform of the image using symmetric      extension algorithm
+	// Extension is set to 3 (eg., int e = 3)
+
+	vector<int> length;
+	vector<double> output,flag;
+	int J =3;
+	int e=3;
+	dwt_2d_sym(vec1,J,nm,output,flag,length,e);
+        
+        vector<int> length2;
+	// This algorithm computes DWT of image of any given size. Together with convolution and
+	// subsampling operations it is clear that subsampled images are of different length than
+	// dyadic length images. In order to compute the "effective" size of DWT we do additional
+	// calculations.
+	dwt_output_dim_sym(length,length2,J);
+	// length2 gives the integer vector that contains the size of subimages that will
+	// combine to form the displayed output image. The last two entries of length2 gives the
+	// size of DWT ( rows_n by cols_n)
+
+	int siz = length2.size();
+	int rows_n=length2[siz-2];
+	int cols_n = length2[siz-1];
+
+	vector<vector< double> > dwtdisp(rows_n, vector<double>(cols_n));
+	dispDWT(output,dwtdisp, length ,length2, J);
+}}}
+
+  There are ,obviously, other ways to display the DWT output. A more precise and more efficient way could be to display output separately at each level instead of trying to bruteforce them into one image.
 
 
 
