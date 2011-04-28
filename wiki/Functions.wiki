@@ -270,7 +270,7 @@ Example Usage: *dwt_2d(vec1, J, nm, dwt_output,flag )*
   vector<double> flag;// Flag stores values including size of input and level of decomposition and this vector needs to be passed to idwt_2d function.
   vector<vector<double> >  dwt_output(rr1, vector<double>(cc1));
   // Computing 2d DWT ( vec1is the signal while dwt_output is the DWT   output)
-  dwt_2d(vec1, J, nm, dwt_output,flag );}}}
+  dwt_2d(vec1, J, nm, dwt_output,flag );}}
 
 === 19. J-Level 2D Inverse Discrete Wavelet Transform ===
 
