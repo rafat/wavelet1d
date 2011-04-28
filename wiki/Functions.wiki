@@ -272,20 +272,5 @@ Example Usage: *dwt_2d(vec1, J, nm, dwt_output,flag )*
   // Computing 2d DWT ( vec1is the signal while dwt_output is the DWT   output)
   dwt_2d(vec1, J, nm, dwt_output,flag );}}}
 
+New Paragraph
 
-=== 19. J-Level 2D Inverse Discrete Wavelet Transform ===
-
-*{{{void* idwt_2d(vector<vector<double> > &,vector<double> &, string ,vector<vector<double> > &)}}}*
-
-Example Usage: *idwt_2d(dwt_output,flag, nm ,idwt_output)*
-
-*idwt_output* is a 2D vector object and may require zeropadding removal depending on the size of input image/matrix. Continuing from above, code fragment for IDWT may look like ffollowing
-
-{{{
- // Finding IDWT
-	   vector<vector<double>  > final(rr1, vector<double>(cc1));
-	   idwt_2d(dwt_hold,flag, nm ,final);
-
-	   // Removing Zeropadding
-
-	   zero_remove(vec1,final);}}}
