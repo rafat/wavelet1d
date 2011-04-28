@@ -192,3 +192,27 @@ Same as *dwt* function except it contains two more arguments and the output is a
 Example Usage: *idwt_sym(dwtop,flag,nm,idwt_output,length) *
 
 *idwt_sym* is identical to *idwt* above except that it contains one more argument in lengths of the coefficients vector *length*. It is the same vector described in *11*.
+
+=== 13. Symmetric Extension ===
+
+*{{{void* symm_ext(vector<double> &, int )}}}*
+
+Example Usage: *symm_ext(signal,e)*
+
+*symm_ext* symmetrically extends the signal by length e in either direction.
+
+=1D Stationary Wavelet Transform=
+
+=== 14. J-Level Stationary Wavelet Transform ===
+
+*{{{void* swt(vector<double> &, int , string , vector<double> &, int &) }}}*
+
+Example Usage: *swt(sig,J,nm,swt_output,length)*
+
+This function works on dyadic length signal. All the coefficients are of equal lengths and that value is stored in *length*. *swt_output* stores value in the same format as *11* - Approximation coefficient vector at level J is stored at the beginning of the *swt_output* vector followed by detail coefficients vectors at levels J, J-1,...., 1. Additionally, ALL coefficient vectors(including redundant approximation vectors) are stored in *gnuout.dat* file. See *gnuswtplot* for more details.
+
+=== 15. J-Level Inverse Stationary Wavelet Transform ===
+
+*{{{void* iswt(vector<double> &,int , string, vector<double> &)}}}*
+
+Example Usage: 
