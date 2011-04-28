@@ -279,16 +279,15 @@ Example Usage: *dwt_2d(vec1, J, nm, dwt_output,flag )*
 
 Example Usage: *idwt_2d(dwt_output,flag, nm ,idwt_output)*
 
-*idwt_output* is a 2D vector object and may require zeropadding removal depending on the size of input image/matrix. Continuing from above, code fragment for IDWT may look like ffollowing
+*idwt_output* is a 2D vector object and may require zeropadding removal depending on the size of input image/matrix. Continuing from above, code fragment for IDWT may look like following
 
 {{{
  // Finding IDWT
-	   vector<vector<double>  > final(rr1, vector<double>(cc1));
-	   idwt_2d(dwt_hold,flag, nm ,final);
-
-	   // Removing Zeropadding
-
-	   zero_remove(vec1,final);}}}
+ vector<vector<double>  > final(rr1, vector<double>(cc1));
+ idwt_2d(dwt_hold,flag, nm ,final);
+ // Removing Zeropadding
+ zero_remove(vec1,final);// vec1 is the input image/matrix
+}}}
 
 
 
