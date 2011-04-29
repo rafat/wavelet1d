@@ -191,5 +191,14 @@ int main() {
     }
 }}}
 
+Input Image in this example is 512X512 "Lena" grayscale image.
 
+https://lh6.googleusercontent.com/_TwtGvT0Ma-0/TbqrRs2Ze1I/AAAAAAAAADY/7TQUtL2FFHk/orig.jpg
 
+Two Level DWT of this image is computed with Daubechies' db4 wavelet.
+
+https://lh3.googleusercontent.com/_TwtGvT0Ma-0/TbqrZCUoi2I/AAAAAAAAADc/l_jWn24PQcs/dwt.jpg
+
+Reconstructed Image is computed using idwt_2d function.
+
+https://lh5.googleusercontent.com/_TwtGvT0Ma-0/TbqrftMQhCI/AAAAAAAAADg/58m4OlfoxvM/recon.jpg
