@@ -408,5 +408,14 @@ int main() {
    }
 }}}
 
+Input Image is a 486X486 grayscale image taken from [http://www.imageprocessingplace.com/root_files_V3/image_databases.htm Image Processing Place Database].
 
+https://lh4.googleusercontent.com/_TwtGvT0Ma-0/Tbqr0N7BjFI/AAAAAAAAADo/Sq-0hyQlhvE/orig.jpg
 
+3-Level DWT is computed using db4 wavelet.
+
+https://lh6.googleusercontent.com/_TwtGvT0Ma-0/Tbqr57dIOrI/AAAAAAAAADs/TiNqMpscsD8/dwt.jpg
+
+Perfect Reconstruction is achieved using idwt_2d_sym function.
+
+https://lh5.googleusercontent.com/_TwtGvT0Ma-0/Tbqr9ku8TJI/AAAAAAAAADw/yqE3StuDNmE/recon.jpg
