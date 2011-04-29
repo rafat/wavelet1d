@@ -1,0 +1,5 @@
+= 2D DWT Demo using dwt_2d   =
+
+_Note- I am using OPENCV to handle image I/O and other basic functionalities so most of the code will be different if you are using different libraries or software. Even if you are using OPENCV, you may not want to use the suboptimal algorithm I have used to tackle the UINT8 image coefficient overflow issues. This isn't something I have paid much attention to and this code is just to demonstrate DWT/IDWT functionality of the library._
+
+
