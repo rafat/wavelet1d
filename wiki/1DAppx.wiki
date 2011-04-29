@@ -1,0 +1,5 @@
+= 1D Linear vs Nonlinear Approximation using dwt =
+
+One of the important property of wavelets is that it gives better approximation results when N largest coefficients are considered instead of first N coefficients. 
+
+[http://code.google.com/p/wavelet1d/source/browse/trunk/demo/wavedemo2.cpp   A sample code] to compare the performance of linear vs. Non-linear approximations is given below. The signal used is "Piecewise-Regular" function from Stanford University's Matlab Wavelab Toolbox
