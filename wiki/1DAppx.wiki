@@ -166,7 +166,7 @@ https://lh4.googleusercontent.com/_TwtGvT0Ma-0/TbssbItgEoI/AAAAAAAAAEk/GkOTJ5cyW
 
 = 1D Linear vs Nonlinear Approximation using dwt_sym =
 
-_Note- Symmetric Extension DWT Implementation dwt_sym is not a N input N output system so it has more DWT coefficients which usually means you'll need more coefficients to match dwt performance for same wavelet. the trade-off is better performance at signal boundaries. In this example same number of approximation coefficients (100) are considered._
+_Note- Symmetric Extension DWT Implementation dwt_sym is not a N input N output system so it has more DWT coefficients which usually means you'll need more coefficients to match dwt approximation performance for same wavelet. the trade-off is better performance at signal boundaries. In this example same number of approximation coefficients (100) are considered._
 
 We use the same signal and wavelet family as above.[http://code.google.com/p/wavelet1d/source/browse/trunk/demo/wavedemo_sym2.cpp Sample Code] is available at the source page.
 
@@ -319,3 +319,10 @@ int main() {
    }
 }}}
 
+Reconstructed Signal using only first 100 coefficients.(Linear Approximation)
+
+https://lh6.googleusercontent.com/_TwtGvT0Ma-0/Tbsre73jQxI/AAAAAAAAAEY/ffRAs9icfhM/symlinappx.gif
+
+Reconstructed Signal using largest 100 coefficients.(Non-Linear Approximation)
+
+https://lh4.googleusercontent.com/_TwtGvT0Ma-0/TbsrfWkT2sI/AAAAAAAAAEc/4vf49wiYHtM/symnlappx.gif
