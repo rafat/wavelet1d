@@ -119,3 +119,8 @@ https://lh3.googleusercontent.com/_TwtGvT0Ma-0/TbqqOIJg76I/AAAAAAAAADA/EfV7aPfz6
 4. Reconstructed Signal.
 
 https://lh5.googleusercontent.com/_TwtGvT0Ma-0/TbqqOaERebI/AAAAAAAAADI/EfxtbRPdYq4/wavedemo1-4.png
+
+
+= 1D DWT/IDWT Demo using dwt_sym function =
+
+[http://code.google.com/p/wavelet1d/source/browse/trunk/demo/wavedemo_sym1.cpp Sample Code] for DWT/IDWT using dwt_sym function is also available.
