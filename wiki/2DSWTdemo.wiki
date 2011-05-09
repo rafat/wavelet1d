@@ -1,4 +1,3 @@
-
 = 2D Stationary Wavelet Transform using swt_2d =
 
 [http://code.google.com/p/wavelet1d/source/browse/trunk/demo/swt2Ddemo.cpp Sample Code]
@@ -174,7 +173,7 @@ Stationary Wavelet Transform is a redundant transform as will be seen below. The
 
 https://lh4.googleusercontent.com/_TwtGvT0Ma-0/TbtFlJ28n6I/AAAAAAAAAFA/ffwmLZX8oRk/cameraman.jpg
 
-Three level Stationary Wavelet Transform is computed using db2 wavelet. Approximation coefficients are stored only for the final (J=3) stage while the three detail coefficients( Horizontal, Vertical and Diagonal) are stored for ech value. All 10 sets of coefficients are 256X256.
+Three level Stationary Wavelet Transform is computed using db2 wavelet. Approximation coefficients are stored only for the final (J=3) stage while the three detail coefficients( Horizontal, Vertical and Diagonal) are stored for each value. All 10 sets of coefficients are 256X256.
 
 Approximation Coefficient
 
@@ -183,6 +182,4 @@ https://lh6.googleusercontent.com/_TwtGvT0Ma-0/Tbnv_x4dUbI/AAAAAAAAACk/9tvLG_-iZ
 Detail Coefficients at Levels 3,2,1. Coefficients are arranged Horizontal,Vertical and Diagonal from top to bottom.
 
 https://lh3.googleusercontent.com/_TwtGvT0Ma-0/TbnvFEiRhpI/AAAAAAAAACc/doxXP9gpcl0/s640/detail.jpg
-
-
 
