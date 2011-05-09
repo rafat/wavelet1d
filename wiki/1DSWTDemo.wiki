@@ -77,4 +77,16 @@ int main() {
    }
 }}}
 
+The signal is the same Piecewise Regular signal that is used in the [http://code.google.com/p/wavelet1d/wiki/1DDWTdemo 1D Deimated DWT Demo].
+
+https://lh5.googleusercontent.com/_TwtGvT0Ma-0/TbqqNlUktbI/AAAAAAAAAC8/YcwG3JqEw-s/wavedemo1-1.png
+
+  The filter used is Daubechies db2 Orthogonal length=4 filter. The undecimated detail and approximation coefficients are plotted as following using GNUPLOT.
+
+https://lh5.googleusercontent.com/_TwtGvT0Ma-0/TchqBRDzvzI/AAAAAAAAAFQ/OUMcPMT554s/swtdisp.png
+
+  The Inverse SWT is perfect reconstruction.
+
+
+
 
