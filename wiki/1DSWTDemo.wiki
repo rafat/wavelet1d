@@ -77,7 +77,7 @@ int main() {
    }
 }}}
 
-The signal is the same Piecewise Regular signal that is used in the [http://code.google.com/p/wavelet1d/wiki/1DDWTdemo 1D Deimated DWT Demo].
+The signal is the same Piecewise Regular signal that is used in the [http://code.google.com/p/wavelet1d/wiki/1DDWTdemo 1D Decimated DWT Demo].
 
 https://lh5.googleusercontent.com/_TwtGvT0Ma-0/TbqqNlUktbI/AAAAAAAAAC8/YcwG3JqEw-s/wavedemo1-1.png
 
@@ -85,8 +85,8 @@ https://lh5.googleusercontent.com/_TwtGvT0Ma-0/TbqqNlUktbI/AAAAAAAAAC8/YcwG3JqEw
 
 https://lh5.googleusercontent.com/_TwtGvT0Ma-0/TchqBRDzvzI/AAAAAAAAAFQ/OUMcPMT554s/swtdisp.png
 
+  There is a very obvious trade-off here. The Transform is good for signal analysis as details and approximation coefficients are of the same length as the original signal at every decomposition stage but the system is highly redundant.
+
   The Inverse SWT is perfect reconstruction.
-
-
 
 
