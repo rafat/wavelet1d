@@ -472,7 +472,7 @@ and
 
 Example Usage: *swt_2d(vec1,J,nm,output)*
 
-*output* is a 1D vector which is exactly equal to 1D DWT output vector of *dwt_2d_sym* except that in this case all coefficients are of same size. If *vec1* isn't a 2^M X 2^ M image/matrix , it will be zeropadded to dyadic dimensions with rows = columns.
+*output* is a 1D vector which is exactly equal to 1D DWT output vector of *dwt_2d_sym* except that in this case all coefficients are of same size. If *vec1* isn't a 2^M X 2^M image/matrix , it will be zeropadded to dyadic dimensions with rows = columns.
 
 For example, a 3 level decomposition of 256X256 image yields 10 256X256 sets of coefficients - one approximation coefficient set at level 3 and three detail coefficients at each level.
 
