@@ -47,7 +47,9 @@ int main() {
 	    }
 	    sig.pop_back();
 	    vector<double> original;
-	    original = sig;
+	    original = sig; // Make a copy of the signal if you want to use original signal
+       // later on. The other option is to use IDWT output as the SWt/ISWT system is
+       // Perefect Reconstruction system.
 	    cout << "Please Enter the Number of DWT Stages J             :" << endl;
 
 	    int J;
