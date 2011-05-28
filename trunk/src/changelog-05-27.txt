@@ -1,0 +1,9 @@
+ver 0.3
+
+A couple of major changes and a few minor tweaks.
+
+1. Periodic DWT code changed. The issue was Perfect Reconstruction wasn't working when filter length became larger than
+ decmated signal. Code changed to implement actual periodic extension instead of using circular shift to mimic periodic 
+extension. Change is strictly under the hood and header file remains unchanged.
+
+2. Dyadic Zero padding is changed to padding the signal by the last value of the signal instead of zeros. 
