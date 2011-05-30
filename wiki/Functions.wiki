@@ -1,4 +1,7 @@
 #summary List of Functions
+
+_Note : Only first ten functions are available in the wave1d library and convfft is also not included. It is my recommendation that you use the latest library(wavelet.lib and libwavelet.a in wavelet-03.rar) even for 1D operations as 1D implementation is faster and more accurate._
+
 = 1D Functions =
 
 ===1. J-Level Discrete Wavelet Transform===
