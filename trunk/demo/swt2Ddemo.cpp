@@ -136,7 +136,7 @@ int main() {
     for (int k=0; k < J; k++) {
     for (int i=0; i < 3*row; i++) {
     	for(int j=0+ k*col; j < (k+1)*col; j++) {
-    		double temp = output[(3*k+1)*row*col+ i * col +j];
+    		double temp = output[(3*k+1)*row*col+ i * col +j - k*col];
     		detail[i][j]= temp;
     	}
     }
