@@ -133,7 +133,7 @@ int main() {
     for (int k=0; k < J; k++) {
     for (int i=0; i < 3*row; i++) {
         for(int j=0+ k*col; j < (k+1)*col; j++) {
-                double temp = output[(3*k+1)*row*col+ i * col +j];
+                double temp = output[(3*k+1)*row*col+ i * col +j - k*col];
                 detail[i][j]= temp;
         }
     }
@@ -182,4 +182,3 @@ https://lh6.googleusercontent.com/_TwtGvT0Ma-0/Tbnv_x4dUbI/AAAAAAAAACk/9tvLG_-iZ
 Detail Coefficients at Levels 3,2,1. Coefficients are arranged Horizontal,Vertical and Diagonal from top to bottom.
 
 https://lh3.googleusercontent.com/_TwtGvT0Ma-0/TbnvFEiRhpI/AAAAAAAAACc/doxXP9gpcl0/s640/detail.jpg
-
