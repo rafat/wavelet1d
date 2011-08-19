@@ -6,7 +6,7 @@ Both periodic and symmetric extension methods for Decimated DWT take exactly sam
 
 === Periodic Extension===
 
-*DWT:*  {{{void* dwt(vector<double> &sig, int J, string nm, vector<double> &dwt_output,vector<double> &flag, vector<int> &length )}}}
+*1. DWT:*  {{{void* dwt(vector<double> &sig, int J, string nm, vector<double> &dwt_output,vector<double> &flag, vector<int> &length )}}}
 
 where,
 
@@ -37,7 +37,7 @@ _DWT stats (periodic extension) for an input signal of length 256_
 
 
 
-*IDWT:* {{{void* idwt(vector<double> &dwtop,vector<double> &flag, string nm,vector<double> &idwt_output,vector<int> &length)}}}
+*2. IDWT:* {{{void* idwt(vector<double> &dwtop,vector<double> &flag, string nm,vector<double> &idwt_output,vector<int> &length)}}}
 
 where,
 
@@ -53,7 +53,7 @@ _*length*_ :: _Length vector obtained from the DWT computations_
 
 ===Symmetric Extension===
 
-*DWT:*  {{{void* dwt_sym(vector<double> &sig, int J, string nm, vector<double> &dwt_output,vector<double> &flag, vector<int> &length )}}}
+*3. DWT:*  {{{void* dwt_sym(vector<double> &sig, int J, string nm, vector<double> &dwt_output,vector<double> &flag, vector<int> &length )}}}
 
 where,
 
@@ -86,7 +86,7 @@ _*length*_ :: _Length Vector Obtained from the DWT computations_
 [https://lh5.googleusercontent.com/-rooeVHG4pdc/Tk7FP_sPOTI/AAAAAAAAALQ/xWTasj0blNE/s912/dwtsymscreen.png]
 _DWT stats (symmetric extension) for an input signal of length 256_
 
-*IDWT:* {{{void* idwt_sym(vector<double> &dwtop,vector<double> &flag, string nm,vector<double> &idwt_output,vector<int> &length)}}}
+*4. IDWT:* {{{void* idwt_sym(vector<double> &dwtop,vector<double> &flag, string nm,vector<double> &idwt_output,vector<int> &length)}}}
 
 where,
 
