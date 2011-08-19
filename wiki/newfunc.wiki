@@ -113,3 +113,7 @@ _Two Level SWT Decomposition of a 247 length signal vector_
 
 
 _*swtop*_ is the output of SWT stage , _*J*_ - number of levels and _*nm*_ is the wavelet as before. Output of ISWT is stored in _*iswt_output*_ vector.
+
+== 2D DWT/IDWT Functions ==
+
+As in 1D case, both periodic and symmetric extension methods for Decimated DWT take exactly same input arguments.The difference is that Output vector in periodic extension has usually the same size (~NXN) as the input vector(NXN) while output vector in symmetric extension case has redundancies with length/breadth depending on size of filter used.
