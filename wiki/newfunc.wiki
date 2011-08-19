@@ -45,6 +45,47 @@ _*flag*_ :: _Same Housekeeping function as obtained from the DWT function_
 
 _*nm*_ :: _Wavelet Used_
 
+===Symmetric Extension===
+
+*DWT:*  {{{void* dwt_sym(vector<double> &sig, int J, string nm, vector<double> &dwt_output,vector<double> &flag, vector<int> &length )}}}
+
+where,
+
+_*sig*_ :: _Input Signal vector_
+
+_*J*_ :: _Decomposition levels_
+
+_*nm*_ :: _Wavelet Name_ _(See filtcoef for available wavelet families)_
+
+_*length*_ :: _Lengths of respective approximation and detail vectors are stored in this integer vector._
+
+_*dwt_output*_ :: _Output of Discrete Wavelet Transform. It stores coefficients in following format:_
+
+*{{{[A(J) D(J) D(J-1) ..... D(1)]}}}*
+
+_ where *A(J)* is the approximation coefficient vector at the Jth level while *D(n)* are the detail coefficient vectors at the nth level. _*length*_ contains the lengths of corresponding vectors. Last entry of the _*length*_ vector is the length of the original signal._
+
+_*flag*_ :: _Housekeeping vector. In this implementation it contains two values-_
+
+_flag[0] is 0 if the signal is even and it is 1 if signal is odd and if it is made even by repeating the last value one more time_
+
+_flag[1] - contains the decomposition levels._
+
+_Housekeeping vector is a double vector as it was originally meant to store more values than it currently does_
+
 _*idwt_output*_ :: _Output of the Inverse Discrete Wavelet Transform_
 
 _*length*_ :: _Length Vector Obtained from the DWT computations_ 
+
+[https://lh5.googleusercontent.com/-rooeVHG4pdc/Tk7FP_sPOTI/AAAAAAAAALQ/xWTasj0blNE/s912/dwtsymscreen.png]
+_DWT stats (symmetric extension) for an input signal of length 256_
+
+*IDWT:* {{{void* idwt(vector<double> &dwtop,vector<double> &flag, string nm,vector<double> &idwt_output,vector<int> &length)}}}
+
+where,
+
+_*dwtop*_ :: _is the DWT vector_
+
+_*flag*_ :: _Same Housekeeping function as obtained from the DWT function_
+
+_*nm*_ :: _Wavelet Used_
