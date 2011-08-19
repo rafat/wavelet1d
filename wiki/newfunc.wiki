@@ -1,3 +1,24 @@
 =List of Functions for wavelet2d Library=
 
 == 1D DWT/IDWT Functions ==
+
+=== Periodic Extension===
+
+*DWT:*  {{{void* dwt(vector<double> &sig, int J, string nm, vector<double> &dwt_output,vector<double> &flag, vector<int> &length )}}}
+
+where,
+
+_sig_ :: _Input Signal vector_
+
+_J_ :: _Decomposition levels_
+
+_nm_ :: _Wavelet Name_ _(See filtcoef for available wavelet families)
+
+_dwt_output_ :: _Output of Discrete Wavelet Transform_
+
+_flag_ :: _Housekeeping vector_
+
+_length_ :: _Lengths of respective approximation and detail vectors_
+
+
+*IDWT:* {{{void* idwt(vector<double> &dwtop,vector<double> &flag, string nm,vector<double> &idwt_output,vector<int> &length)}}}
