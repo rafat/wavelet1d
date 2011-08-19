@@ -8,17 +8,28 @@
 
 where,
 
-_sig_ :: _Input Signal vector_
+_*sig*_ :: _Input Signal vector_
 
-_J_ :: _Decomposition levels_
+_*J*_ :: _Decomposition levels_
 
-_nm_ :: _Wavelet Name_ _(See filtcoef for available wavelet families)
+_*nm*_ :: _Wavelet Name_ _(See filtcoef for available wavelet families)_
 
-_dwt_output_ :: _Output of Discrete Wavelet Transform_
+_*length*_ :: _Lengths of respective approximation and detail vectors are stored in this integer vector._
 
-_flag_ :: _Housekeeping vector_
+_*dwt_output*_ :: _Output of Discrete Wavelet Transform. It stores coefficients in following format:_
 
-_length_ :: _Lengths of respective approximation and detail vectors_
+*{{{[A(J) D(J) D(J-1) ..... D(1)]}}}*
+
+_ where *A(J)* is the approximation coefficient vector at the Jth level while *D(n)* are the detail coefficient vectors at the nth level. _*length*_ contains the lengths of corresponding vectors. Last entry of the _*length*_ vector is the length of the original signal._
+
+_*flag*_ :: _Housekeeping vector. In this implementation it contains two values-_
+
+_flag[0] is 0 if the signal is even and it is 1 if signal is odd and if it is made even by repeating the last value one more time_
+
+_flag[1] - contains the decomposition levels._
+
+_Housekeeping vector is a double vector as it was originally meant to store more values than it currently does_
+
 
 
 *IDWT:* {{{void* idwt(vector<double> &dwtop,vector<double> &flag, string nm,vector<double> &idwt_output,vector<int> &length)}}}
