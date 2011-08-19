@@ -131,9 +131,9 @@ _*nm*_ :: _Wavelet Name_
 _*flag*_ :: _Stores values for IDWT function.Only flag[0] value is important as it contains decomposition levels._
 
 _*dwt_output*_ :: _1D vector that stores the output in the following format
-*{{{[A(J) D(J) D(J-1) ..... D(1)]}}}*_
+*A(J) D,,h,,(J) D,,v,,(J) D,,d,,(J)  ..... D,,h,,(1) D,,v,,(1) D,,d,,(1)*_
 
-where _*A(J)*_ is the approximation coefficient vector at the Jth level while _*D(n)*_ are the detail coefficient vectors at the nth level. It is important to remember that approximation and detail coefficients are actually two dimensional so we need a length vector that stores rows and columns values of each coefficient element. The length vector is given by _*length*_.
+where _*A(J)*_ is the approximation coefficient vector at the Jth level while _*D(n)*_ are the three detail coefficient vectors(horizontal,vertical and detail) at the nth level. It is important to remember that approximation and detail coefficients are actually two dimensional so we need a length vector that stores rows and columns values of each coefficient element. The length vector is given by _*length*_.
 
 For example, the first element of _*output*_ vector is the approximation matrix stored as a vector and the first two elements of _*length*_ vectors are row and column values of the approximation matrix. In other words, a 300 element approximation matrix ( 15 rows X 20 columns) can be extracted from the 300 element approximation vector.
 
@@ -167,9 +167,9 @@ _*nm*_ :: _Wavelet Name_
 _*flag*_ :: _Stores values for IDWT function.Only flag[0] value is important as it contains decomposition levels._
 
 _*dwt_output*_ :: _1D vector that stores the output in the following format
-*{{{[A(J) D(J) D(J-1) ..... D(1)]}}}*_
+*A(J) D,,h,,(J) D,,v,,(J) D,,d,,(J)  ..... D,,h,,(1) D,,v,,(1) D,,d,,(1)*_
 
-where _*A(J)*_ is the approximation coefficient vector at the Jth level while _*D(n)*_ are the detail coefficient vectors at the nth level. It is important to remember that approximation and detail coefficients are actually two dimensional so we need a length vector that stores rows and columns values of each coefficient element. The length vector is given by _*length*_.
+where _*A(J)*_ is the approximation coefficient vector at the Jth level while _*D(n)*_ are the three detail coefficient vectors(horizontal,vertical and detail) at the nth level. It is important to remember that approximation and detail coefficients are actually two dimensional so we need a length vector that stores rows and columns values of each coefficient element. The length vector is given by _*length*_.
 
 For example, the first element of _*output*_ vector is the approximation matrix stored as a vector and the first two elements of _*length*_ vectors are row and column values of the approximation matrix. In other words, a 300 element approximation matrix ( 15 rows X 20 columns) can be extracted from the 300 element approximation vector.
 
@@ -189,3 +189,9 @@ _*nm*_ :: _Wavelet Used_
 _*idwt_output*_ :: _Output of IDWT which should be defined to have the same number of rows and columns as the input image/matrix_
 
 _*length*_ :: _Length vector obtained from the DWT computations_
+
+==2D SWT/ISWT Functions==
+
+*11. 2D SWT:* {{{void* swt_2d(vector<vector<double> > &sig,int J, string nm, vector<double> &swt_output)}}}
+
+_*swt_output*_ is a 1D vector which is arranged the same way as DWT output vector in the Decimated 2D cases above except that in this case all coefficients are of same size. 
