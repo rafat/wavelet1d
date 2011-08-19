@@ -36,3 +36,15 @@ _DWT stats (periodic extension) for an input signal of length 256_
 
 
 *IDWT:* {{{void* idwt(vector<double> &dwtop,vector<double> &flag, string nm,vector<double> &idwt_output,vector<int> &length)}}}
+
+where,
+
+_*dwtop*_ :: _is the DWT vector_
+
+_*flag*_ :: _Same Housekeeping function as obtained from the DWT function_
+
+_*nm*_ :: _Wavelet Used_
+
+_*idwt_output*_ :: _Output of the Inverse Discrete Wavelet Transform_
+
+_*length*_ :: _Length Vector Obtained from the DWT computations_ 
