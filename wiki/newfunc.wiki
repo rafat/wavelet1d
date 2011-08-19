@@ -6,7 +6,7 @@ Both periodic and symmetric extension methods for Decimated DWT take exactly sam
 
 === Periodic Extension===
 
-<span style="color:green;">*DWT:*  {{{void* dwt(vector<double> &sig, int J, string nm, vector<double> &dwt_output,vector<double> &flag, vector<int> &length )}}}</span>
+*DWT:*  {{{void* dwt(vector<double> &sig, int J, string nm, vector<double> &dwt_output,vector<double> &flag, vector<int> &length )}}}
 
 where,
 
