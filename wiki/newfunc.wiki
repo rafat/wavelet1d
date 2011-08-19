@@ -120,16 +120,16 @@ As in 1D case, both periodic and symmetric extension methods for Decimated DWT t
 
 *7. 2D DWT: * {{{void* dwt_2d(vector<vector<double> > &origsig, int J, string nm, vector<double> &dwt_output,vector<double> &flag, vector<int> &length) }}}
 
-_*origsig*_ Input Image/Matrix
+_*origsig*_ :: _Input Image/Matrix_
 
-_*J*_ Number of Decomposition Levels
+_*J*_ :: _Number of Decomposition Levels_
 
-_*nm*_ Wavelet Name
+_*nm*_ :: _Wavelet Name_
 
-_*flag*_ Stores values for IDWT function
+_*flag*_ :: _Stores values for IDWT function.Only flag[0] value is important as it contains decomposition levels._
 
-_*dwt_output*_ 1D vector that stores the output in the following format
-*{{{[A(J) D(J) D(J-1) ..... D(1)]}}}*
+_*dwt_output*_ :: _1D vector that stores the output in the following format
+*{{{[A(J) D(J) D(J-1) ..... D(1)]}}}*_
 
 where _*A(J)*_ is the approximation coefficient vector at the Jth level while _*D(n)*_ are the detail coefficient vectors at the nth level. It is important to remember that approximation and detail coefficients are actually two dimensional so we need a length vector that stores rows and columns values of each coefficient element. The length vector is given by _*length*_.
 
