@@ -99,3 +99,7 @@ _*nm*_ :: _Wavelet Used_
 _*idwt_output*_ :: _Output of IDWT_
 
 _*length*_ :: _Length vector obtained from the DWT computations_
+
+==1D SWT/ISWT Functions==
+
+*5. SWT:* {{{void* swt(vector<double> &sig, int J, string nm, vector<double> &swt_output, int &length)}}}
