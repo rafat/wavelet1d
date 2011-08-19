@@ -47,6 +47,10 @@ _*flag*_ :: _Same Housekeeping function as obtained from the DWT function_
 
 _*nm*_ :: _Wavelet Used_
 
+_*idwt_output*_ :: _Output of IDWT_
+
+_*length*_ :: _Length vector obtained from the DWT computations_
+
 ===Symmetric Extension===
 
 *DWT:*  {{{void* dwt_sym(vector<double> &sig, int J, string nm, vector<double> &dwt_output,vector<double> &flag, vector<int> &length )}}}
@@ -91,3 +95,7 @@ _*dwtop*_ :: _is the DWT vector_
 _*flag*_ :: _Same Housekeeping function as obtained from the DWT function_
 
 _*nm*_ :: _Wavelet Used_
+
+_*idwt_output*_ :: _Output of IDWT_
+
+_*length*_ :: _Length vector obtained from the DWT computations_
