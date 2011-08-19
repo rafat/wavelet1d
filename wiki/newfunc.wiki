@@ -30,6 +30,9 @@ _flag[1] - contains the decomposition levels._
 
 _Housekeeping vector is a double vector as it was originally meant to store more values than it currently does_
 
+[https://lh3.googleusercontent.com/-axX5BI71K7k/Tk7CvelHwrI/AAAAAAAAALI/Tc9h_KznCgM/s912/dwtperscreen.png]
+_DWT stats (periodic extension) for an input signal of length 256_
+
 
 
 *IDWT:* {{{void* idwt(vector<double> &dwtop,vector<double> &flag, string nm,vector<double> &idwt_output,vector<int> &length)}}}
