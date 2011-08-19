@@ -141,3 +141,15 @@ For example, the first element of _*output*_ vector is the approximation matrix 
 _ 2D DWT computation using periodic extension_
 
 *8. 2D IDWT:* {{{void* idwt_2d(vector<double>  &dwtop,vector<double> &flag, string nm,vector<vector<double> > &idwt_output, vector<int> &length)}}}
+
+where,
+
+_*dwtop*_ :: _is the DWT vector_
+
+_*flag*_ :: _Same Housekeeping function as obtained from the DWT function_
+
+_*nm*_ :: _Wavelet Used_
+
+_*idwt_output*_ :: _Output of IDWT which should be defined to have the same number of rows and columns as the input image/matrix_
+
+_*length*_ :: _Length vector obtained from the DWT computations_
