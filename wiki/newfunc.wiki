@@ -2,6 +2,8 @@
 
 == 1D DWT/IDWT Functions ==
 
+Both periodic and symmetric extension methods for Decimated DWT take exactly same input arguments.The difference is that Output vector in periodic extension has usually the same size (~N) as the input vector(N) while output vector in symmetric extension case has redundancies with length depending on size of filter used.
+
 === Periodic Extension===
 
 *DWT:*  {{{void* dwt(vector<double> &sig, int J, string nm, vector<double> &dwt_output,vector<double> &flag, vector<int> &length )}}}
@@ -80,7 +82,7 @@ _*length*_ :: _Length Vector Obtained from the DWT computations_
 [https://lh5.googleusercontent.com/-rooeVHG4pdc/Tk7FP_sPOTI/AAAAAAAAALQ/xWTasj0blNE/s912/dwtsymscreen.png]
 _DWT stats (symmetric extension) for an input signal of length 256_
 
-*IDWT:* {{{void* idwt(vector<double> &dwtop,vector<double> &flag, string nm,vector<double> &idwt_output,vector<int> &length)}}}
+*IDWT:* {{{void* idwt_sym(vector<double> &dwtop,vector<double> &flag, string nm,vector<double> &idwt_output,vector<int> &length)}}}
 
 where,
 
