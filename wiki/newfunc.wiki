@@ -117,3 +117,6 @@ _*swtop*_ is the output of SWT stage , _*J*_ - number of levels and _*nm*_ is th
 == 2D DWT/IDWT Functions ==
 
 As in 1D case, both periodic and symmetric extension methods for Decimated DWT take exactly same input arguments.The difference is that Output vector in periodic extension has usually the same size (~NXN) as the input vector(NXN) while output vector in symmetric extension case has redundancies with length/breadth depending on size of filter used.
+
+*7. 2D DWT: * {{{void* dwt_2d(vector<vector<double> > &origsig, int J, string nm, vector<double> &dwt_output
+, vector<double> &flag , vector<int> &length) }}}
