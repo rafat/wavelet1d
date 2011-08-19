@@ -134,3 +134,6 @@ _*dwt_output*_ :: _1D vector that stores the output in the following format
 where _*A(J)*_ is the approximation coefficient vector at the Jth level while _*D(n)*_ are the detail coefficient vectors at the nth level. It is important to remember that approximation and detail coefficients are actually two dimensional so we need a length vector that stores rows and columns values of each coefficient element. The length vector is given by _*length*_.
 
 For example, the first element of _*output*_ vector is the approximation matrix stored as a vector and the first two elements of _*length*_ vectors are row and column values of the approximation matrix. In other words, a 300 element approximation matrix ( 15 rows X 20 columns) can be extracted from the 300 element approximation vector.
+
+[https://lh3.googleusercontent.com/-mQm6JsFSDSE/Tk7eqaNPhLI/AAAAAAAAALY/CF70J_UuJOk/s912/dwt2dperscreen.png]
+_ 2D DWT computation using periodic extension_
