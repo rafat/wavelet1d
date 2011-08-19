@@ -153,3 +153,39 @@ _*nm*_ :: _Wavelet Used_
 _*idwt_output*_ :: _Output of IDWT which should be defined to have the same number of rows and columns as the input image/matrix_
 
 _*length*_ :: _Length vector obtained from the DWT computations_
+
+===Symmetric Extension===
+
+*9. 2D DWT: * {{{void* dwt_2d_sym(vector<vector<double> > &origsig, int J, string nm, vector<double> &dwt_output,vector<double> &flag, vector<int> &length) }}}
+
+_*origsig*_ :: _Input Image/Matrix_
+
+_*J*_ :: _Number of Decomposition Levels_
+
+_*nm*_ :: _Wavelet Name_
+
+_*flag*_ :: _Stores values for IDWT function.Only flag[0] value is important as it contains decomposition levels._
+
+_*dwt_output*_ :: _1D vector that stores the output in the following format
+*{{{[A(J) D(J) D(J-1) ..... D(1)]}}}*_
+
+where _*A(J)*_ is the approximation coefficient vector at the Jth level while _*D(n)*_ are the detail coefficient vectors at the nth level. It is important to remember that approximation and detail coefficients are actually two dimensional so we need a length vector that stores rows and columns values of each coefficient element. The length vector is given by _*length*_.
+
+For example, the first element of _*output*_ vector is the approximation matrix stored as a vector and the first two elements of _*length*_ vectors are row and column values of the approximation matrix. In other words, a 300 element approximation matrix ( 15 rows X 20 columns) can be extracted from the 300 element approximation vector.
+
+[https://lh3.googleusercontent.com/-H_5vbaS10FY/Tk7i3pyq5jI/AAAAAAAAALc/8ajg-QiCjpk/s912/dwt2dsymscreen.png]
+_ 2D DWT computation using symmetric extension_
+
+*10. 2D IDWT:* {{{void* idwt_2d_sym(vector<double>  &dwtop,vector<double> &flag, string nm,vector<vector<double> > &idwt_output, vector<int> &length)}}}
+
+where,
+
+_*dwtop*_ :: _is the DWT vector_
+
+_*flag*_ :: _Same Housekeeping function as obtained from the DWT function_
+
+_*nm*_ :: _Wavelet Used_
+
+_*idwt_output*_ :: _Output of IDWT which should be defined to have the same number of rows and columns as the input image/matrix_
+
+_*length*_ :: _Length vector obtained from the DWT computations_
