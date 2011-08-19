@@ -108,3 +108,8 @@ _*length*_ :: _Length vector obtained from the DWT computations_
 
 [https://lh6.googleusercontent.com/-LrlkA6bwApU/Tk7QyJDP7LI/AAAAAAAAALU/tJCOQXWxpiE/s912/swtscreen.png]
 _Two Level SWT Decomposition of a 247 length signal vector_
+
+*6. ISWT:* {{{void* iswt(vector<double> &swtop,int J, string nm, vector<double> &iswt_output)}}}
+
+
+_*swtop*_ is the output of SWT stage , _*J*_ - number of levels and _*nm*_ is the wavelet as before. Output of ISWT is stored in _*iswt_output*_ vector.
