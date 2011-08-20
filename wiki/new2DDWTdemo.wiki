@@ -6,7 +6,7 @@ _Notes_
 
 2. Please make sure that right header file is included. Following sample program links to wavelet2d.h which is the header for shared libraries. wavelet2s.h must be included for static libraries. 
 
-3. I'm using OPENCV to handle images as i already use OPENCV for other image processing operations. You may want to use some simpler image libraries as OPENCV is a full image processing suite and is very bulky or you can just use 2D matrices/build your own image classes. Regardless, DWT/IDWT operations are more important than the choice of libraries.
+3. I'm using OPENCV to handle images as i already use OPENCV for other image processing work. You may want to use some simpler image libraries as OPENCV is a full image processing suite and is very bulky or you can just use 2D matrices/build your own image classes. Regardless, DWT/IDWT operations are more important than the choice of libraries.
 
 {{{
 
