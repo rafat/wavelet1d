@@ -11,5 +11,11 @@
 
  This implementation uses C++ vector objects to accept input, store and output data. This is done to overcome certain programming limitations associated with using arrays. Dynamic arrays were also an option but they require a lot of house-cleaning without having any advantages over vector objects. To learn more about vectors, please refer to excellent tutorial at [http://www.cplusplus.com/reference/stl/vector/ CPLUSPLUS]. Vectors and Arrays can be converted back and forth so even if you are more comfortable with arrays, using vectors should not really be a problem.
 
+||*[http://code.google.com/p/wavelet1d/wiki/newfunc List of Functions]*|| Lists all Functions available in the Library||
 
+https://lh4.googleusercontent.com/-4w-fWQyoieo/Thn_s7qb8-I/AAAAAAAAAGs/B0HFvLru6CU/s512/empire.jpg
+
+_J=2 Level Discrete Wavelet Transform of a 569X800 image using dwt_2d_sym function (Resized here for Display)_
+
+Image Processing Note : I have not implemented any image class in C++ so I'm using OPENCV to handle images. It happens to be a rather bulky package and if you are not already working in image processing area, there are other more convenient options that may be used to handle simple image operations( loading, displaying, saving and converting them to c++ STL formats).
   
