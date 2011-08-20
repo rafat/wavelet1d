@@ -198,15 +198,15 @@ _*swt_output*_ is a 1D vector which is arranged the same way as DWT output vecto
 
 ==Convolution==
 
-*12. Convolution (Recommended):* {{{double convfft(vector<double> &a, vector<double> &b, vector<double> &c)}}}
+*12. Convolution FFT_ESTIMATE (Recommended):* {{{double convfft(vector<double> &a, vector<double> &b, vector<double> &c)}}}
 
 Convolution function is pretty straightforward. _*a*_ and _*b*_ are input vectors and _*c*_ is the convolution output. _*convfft*_ uses FFT so it gives better results in most cases than the regular fft which is implemented by _*convol*_ function. 
 
 
-*13. Convolution* (Use it for only smaller vectors)*:* {{{double convol(vector<double> &a, vector<double> &b, vector<double> &c)}}}
+*13. Convolution Direct* (Use it for only smaller vectors)*:* {{{double convol(vector<double> &a, vector<double> &b, vector<double> &c)}}}
 
 
-*14. Convolution* (Recommended if you are going to perform convolutions of same length hundreds or thousands of time in one program)*:* {{{double convfftm(vector<double> &a, vector<double> &b, vector<double> &c)}}}
+*14. Convolution FFT_MEASURE* (Recommended if you are going to perform convolutions of same length hundreds or thousands of time in one program)*:* {{{double convfftm(vector<double> &a, vector<double> &b, vector<double> &c)}}}
 
 _*convfftm*_ is performed using MEASUREing capabilities of FFTW3 library so it is not recommended if you are going to convolve two vectors only once. This has some overhead but gives good results if multiple instances of same convolution are performed repeatedly. 
 
@@ -260,3 +260,9 @@ _*per_ext*_ periodically extends the signal _*sig*_ by value _*a*_ in either dir
 *19. Symmetric Extension:* {{{void* symm_ext(vector<double> &sig, int a) }}}
 
 _*symm_ext*_ symmetrically extensd the signal _*sig*_ by value _*a*_ in either direction. This function needs refinement as it doesn't gives good results for smaller vectors.
+
+==2D Vector Manipulation==
+
+*20. 2D Downsampling:* {{{void* downsamp2(vector<vector<double> > & vec1,vector<vector<double> > & vec2, int rows_dn, int cols_dn) }}}
+
+_*vec1*_ is the input, _*rows_dn*_ and _*cols_dn*_ are row and column downsampling factors. _*vec2*_ is the downsampled matrix. 
