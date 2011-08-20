@@ -244,3 +244,11 @@ _*sig*_ :: Signal to be Downsampled
 _*M*_ :: Downsampling factor
 
 _*sig_d*_ :: Downsampled signal
+
+*17. Upsampling:* {{{void upsamp(vector<double> &sig, int M, vector<double> &sig_u)}}}
+
+_*sig*_ :: Signal to be Upsampled
+
+_*M*_ :: Upsampling factor
+
+_*sig_u*_ :: Upsampled signal
