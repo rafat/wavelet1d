@@ -91,7 +91,7 @@ I've plotted the following functions using dyadwaves (a Wavelet GUI I have build
 [https://lh5.googleusercontent.com/-wAxR0xM5I38/Tk9_iWhol_I/AAAAAAAAAL4/C9Sck_VZ7Ms/s912/1ddwtsig.png]
 _Length 256 Piecewise Regular signal from WaveLab_
 
-[https://lh5.googleusercontent.com/-wAxR0xM5I38/Tk9_iWhol_I/AAAAAAAAAL4/C9Sck_VZ7Ms/s912/1ddwtsig.png]
+[https://lh4.googleusercontent.com/-xG9LotALuPs/Tk9_iFkYsiI/AAAAAAAAALw/G0S0ipsAOKI/s912/1ddwtout.png]
 _2 Level DWT Decomposition Coefficients obtained using db2 wavelet_
 
 [https://lh6.googleusercontent.com/-DscYhVPOEPY/Tk9_iFvaZTI/AAAAAAAAALs/3q4hfboBLLA/s912/1ddwtrecon.png]
