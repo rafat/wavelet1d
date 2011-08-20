@@ -128,6 +128,7 @@ int main() {
          cvShowImage( "Low Pass Image", cvImg ); // image visualisation
          cvWaitKey();
          cvDestroyWindow("Low Pass Image");
+           cvSaveImage("blur.bmp",cvImg);
 
          // Displaying BandPass Images
 
