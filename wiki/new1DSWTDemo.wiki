@@ -105,7 +105,7 @@ _Console Running swt demo_
 _Input Signal(Length-256)_
 
 [https://lh3.googleusercontent.com/-mIua34Jqmkg/Tk-QtY0G5yI/AAAAAAAAAMU/2p14kFkXlzI/s912/swtcoeff.png]
-_SWT Coefficients for two level of Decomposition(Length 3 X 356)_
+_SWT Coefficients for two level of Decomposition(Length 3 X 256)_
 
 [https://lh5.googleusercontent.com/-ZkYxAhK7oyE/Tk-QtesE_1I/AAAAAAAAAMQ/rxp5uyVtMQg/s912/swtrecon.png]
 _Reconstructed Signal_ 
