@@ -60,8 +60,6 @@ int main() {
         int length;// All coefficients are of same length. Variable "length" returns length
         // of coefficients. It is not required for ISWT computations.
 
-        // If signal is not of dyadic length it is zeropadded as the algorithm is designed to
-        // work with signals of 2^M length. These extra zeros can be removed after reconstruction
 
 
 	    swt(sig, J, nm, swt_output, length);
