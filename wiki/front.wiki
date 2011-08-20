@@ -24,8 +24,9 @@ Focus is on speed.
 
 4. Focus on shared libraries. No static libraries for MSVC++ although MinGW and LINUX version will come with static as well as shared libraries.
  
-wavelet2*d* - *d*ynamic libraries( .so and .dll)
-wavelet2*s* - *s*tatic libraries (.a)
+wavelet2d - dynamic libraries( .so and .dll)
+
+wavelet2s - static libraries (.a)
 
 ||*[http://code.google.com/p/wavelet1d/wiki/newfunc List of Functions]*|| Lists all Functions available in the Library||
 ||*[http://code.google.com/p/wavelet1d/wiki/new1DDWTdemo Example Code 1]*|| 1D DWT/IDWT Demo Code||
