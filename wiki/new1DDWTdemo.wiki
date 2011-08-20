@@ -99,7 +99,7 @@ int main() {
 This sample program asks user for wavelet name, signal file and number of DWT stages. It then computes DWT of the input signal and then the IDWT from the wavelet coefficients so obtained.
 [https://lh3.googleusercontent.com/-wIrGfF_x4ug/Tk9_idI6YiI/AAAAAAAAAL0/jIFwli0Tndk/s912/1ddwtscreen.png]
 
-I've plotted the following functions using dyadwaves (a Wavelet GUI I have build)-
+As can be seen, outputs are in _.txt_ format but they can be modified and plotted with any software of your choice.
 
 [https://lh5.googleusercontent.com/-wAxR0xM5I38/Tk9_iWhol_I/AAAAAAAAAL4/C9Sck_VZ7Ms/s912/1ddwtsig.png]
 _Length 256 Piecewise Regular signal from WaveLab_
