@@ -270,3 +270,7 @@ _*vec1*_ is the input, _*rows_dn*_ and _*cols_dn*_ are row and column downsampli
 *21. 2D Upsampling:* {{{void* upsamp2(vector<vector<double> > & vec1,vector<vector<double> > & vec2, int rows_up, int cols_up)}}}
 
 _*vec1*_ is the input, _*rows_up*_ and _*cols_up*_ are row and column upsampling factors. _*vec2*_ is the upsampled matrix. 
+
+*22. 2D Periodic Extension:* {{{void* per_ext2d(vector<vector<double> > &signal,vector<vector<double> > &temp2, int a)}}}
+
+_*signal*_ is extended by _*a_* in all directions and the result is returned in 2D vector _*temp2*_
