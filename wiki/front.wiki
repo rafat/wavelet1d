@@ -1,6 +1,6 @@
 =C++ 1D/2D DWT Implementation for Win32 and Linux=
 
-===WaveLib Version 0.4.0===
+===Wavelet2d and Wavelet2s Libraries===
  # 1D DWT and IDWT Implementation (Two Modes)
  # 2D DWT and IDWT Implementation (Two Modes)
  # 1D SWT and ISWT Implementation ( Stationary Wavelet Transform)
