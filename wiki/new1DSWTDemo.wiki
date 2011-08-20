@@ -100,3 +100,12 @@ int main() {
 
 [https://lh4.googleusercontent.com/-f2xNxK3vGHo/Tk-QtuCS_7I/AAAAAAAAAMY/LvvYQpISVIo/s912/swt1dscreen.png]
 _Console Running swt demo_
+
+[https://lh5.googleusercontent.com/-wAxR0xM5I38/Tk9_iWhol_I/AAAAAAAAAL4/C9Sck_VZ7Ms/s912/1ddwtsig.png]
+_Input Signal(Length-256)_
+
+[https://lh3.googleusercontent.com/-mIua34Jqmkg/Tk-QtY0G5yI/AAAAAAAAAMU/2p14kFkXlzI/s912/swtcoeff.png]
+_SWT Coefficients for two level of Decomposition(Length 3 X 356)_
+
+[https://lh5.googleusercontent.com/-ZkYxAhK7oyE/Tk-QtesE_1I/AAAAAAAAAMQ/rxp5uyVtMQg/s912/swtrecon.png]
+_Reconstructed Signal_ 
