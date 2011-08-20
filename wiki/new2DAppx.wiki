@@ -8,7 +8,7 @@ _Note_
 
 3. I'm using OPENCV to handle images as i already use OPENCV for other image processing work. You may want to use some simpler image libraries as OPENCV is a full image processing suite and is very bulky or you can just use 2D matrices/build your own image classes. Regardless, DWT/IDWT operations are more important than the choice of libraries. 
 
-[http://code.google.com/p/wavelet1d/source/browse/trunk/wavelet2d/demo/imagedemo2.cpp Sample Code
+[http://code.google.com/p/wavelet1d/source/browse/trunk/wavelet2d/demo/imagedemo2.cpp Sample Code]
 
 {{{
 
