@@ -100,7 +100,7 @@ int main() {
     vector<int> length;
     vector<double> output,flag;
     int J =3;
-    dwt_2d(vec1,J,nm,output,flag,length);
+    dwt_2d_sym(vec1,J,nm,output,flag,length);
 
     double max;
     vector<int> length2;
@@ -167,7 +167,7 @@ int main() {
 
     vector<vector<double> > idwt_output(rows, vector<double>(cols));
 
-    idwt_2d(output,flag, nm, idwt_output,length);
+    idwt_2d_sym(output,flag, nm, idwt_output,length);
 
 
 
