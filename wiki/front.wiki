@@ -5,9 +5,9 @@
  # 1D SWT and ISWT Implementation ( Stationary Wavelet Transform)
  # 2D SWT Implementation
  # Implemented using FFTW3 Library
- # Shared(*.so) and static(*.a) libraries for Linux
- # Shared(*.dll) and static(*.a) libraries for Win32 GCC (MinGW).
- # Shared(*.dll) libraries for Microsoft VC++
+ # Shared(.so) and static(.a) libraries for Linux
+ # Shared(.dll) and static(.a) libraries for Win32 GCC (MinGW).
+ # Shared(.dll) libraries for Microsoft VC++
 
 
   
