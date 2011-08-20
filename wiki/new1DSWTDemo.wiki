@@ -97,3 +97,6 @@ int main() {
 }
 
 }}}
+
+[https://lh4.googleusercontent.com/-f2xNxK3vGHo/Tk-QtuCS_7I/AAAAAAAAAMY/LvvYQpISVIo/s912/swt1dscreen.png]
+_Console Running swt demo_
