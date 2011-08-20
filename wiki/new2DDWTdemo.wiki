@@ -12,14 +12,6 @@ _Notes_
 
 {{{
 
-//============================================================================
-// Name        : imagedemo1.cpp
-// Author      : Rafat Hussain
-// Version     :
-// Copyright   : 
-// Description : DWT of arbitrary size image using symmetric or periodic extension
-//============================================================================
-
 #include <iostream>
 #include <fstream>
 #include <vector>
