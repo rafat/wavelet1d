@@ -1,6 +1,6 @@
 =C++ 1D/2D DWT Implementation for Win32 and Linux=
 
-===Wavelet2d and Wavelet2s Libraries===
+===Wavelet2d Libraries===
  # 1D DWT and IDWT Implementation (Two Modes)
  # 2D DWT and IDWT Implementation (Two Modes)
  # 1D SWT and ISWT Implementation ( Stationary Wavelet Transform)
@@ -23,7 +23,9 @@ Focus is on speed.
 3. Periodic and Symmetric functions take same arguments. They will still be accessed by the same names, though.(dwt ,dwt_sym etc.) 
 
 4. Focus on shared libraries. No static libraries for MSVC++ although MinGW and LINUX version will come with static as well as shared libraries.
-
+ 
+wavelet2*d* - *d*ynamic libraries( .so and .dll)
+wavelet2*s* - *s*tatic libraries (.a)
 
 ||*[http://code.google.com/p/wavelet1d/wiki/newfunc List of Functions]*|| Lists all Functions available in the Library||
 ||*[http://code.google.com/p/wavelet1d/wiki/new1DDWTdemo Example Code 1]*|| 1D DWT/IDWT Demo Code||
