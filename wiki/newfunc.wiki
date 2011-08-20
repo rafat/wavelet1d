@@ -266,3 +266,7 @@ _*symm_ext*_ symmetrically extensd the signal _*sig*_ by value _*a*_ in either d
 *20. 2D Downsampling:* {{{void* downsamp2(vector<vector<double> > & vec1,vector<vector<double> > & vec2, int rows_dn, int cols_dn) }}}
 
 _*vec1*_ is the input, _*rows_dn*_ and _*cols_dn*_ are row and column downsampling factors. _*vec2*_ is the downsampled matrix. 
+
+*21. 2D Upsampling:* {{{void* upsamp2(vector<vector<double> > & vec1,vector<vector<double> > & vec2, int rows_up, int cols_up)}}}
+
+_*vec1*_ is the input, _*rows_up*_ and _*cols_up*_ are row and column upsampling factors. _*vec2*_ is the upsampled matrix. 
