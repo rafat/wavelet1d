@@ -112,7 +112,7 @@ int main() {
     vector<int> length;
     vector<double> output,flag;
     int J =3;
-    dwt_2d(vec1,J,nm,output,flag,length);
+    dwt_2d_sym(vec1,J,nm,output,flag,length);
 
     double max;
     vector<int> length2;
@@ -179,7 +179,7 @@ int main() {
 
     vector<vector<double> > idwt_output(rows, vector<double>(cols));
 
-    idwt_2d(output,flag, nm, idwt_output,length);
+    idwt_2d_sym(output,flag, nm, idwt_output,length);
 
 
 
@@ -209,3 +209,11 @@ int main() {
 }
 
 }}}
+
+Input Image is a low resolution 250X189 grayscale snow.jpg image.
+
+[https://lh6.googleusercontent.com/-8t3vGld98oY/Tk-eBq7MV0I/AAAAAAAAAM8/4pxc03jqWk0/snow.jpg]
+_Input 250X189 Image_
+
+[https://lh3.googleusercontent.com/-GE-XmAmDda0/Tk-eAqYxuFI/AAAAAAAAAMw/jxHLfz1g-1A/2ddwtout.jpg]
+_3-Level Decomposition using db3 wavelet_
