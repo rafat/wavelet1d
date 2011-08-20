@@ -252,3 +252,11 @@ _*sig*_ :: Signal to be Upsampled
 _*M*_ :: Upsampling factor
 
 _*sig_u*_ :: Upsampled signal
+
+*18. Periodic Extension:* {{{void* per_ext(vector<double> &sig, int a) }}}
+
+_*per_ext*_ periodically extends the signal _*sig*_ by value _*a*_ in either direction. 
+
+*19. Symmetric Extension:* {{{void* symm_ext(vector<double> &sig, int a) }}}
+
+_*symm_ext*_ symmetrically extensd the signal _*sig*_ by value _*a*_ in either direction. This function needs refinement as it doesn't gives good results for smaller vectors.
