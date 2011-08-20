@@ -1,3 +1,5 @@
+=1D Linear vs Nonlinear Approximation=
+
 _Note_
 
 1. dwt and dwt_sym functions are interchangeable in the following code as they take the same arguments. You may have to make some trivial modifications due to different sized output coeffficients.
@@ -169,3 +171,27 @@ int main() {
 }
 
 }}}
+
+This program computes DWT of the 256-point signal and then uses only 100 coefficients to reconstruct the signal. In the first case, first 100 coefficients are are used to compute linear approximation. In the second case, 100 largest coefficients are used by calculating a threshold that separates largest 100 coefficients from the others.The wavelet used is db3 and the signal is decomposed and reconstructed over 5 stages of DWT/IDWT. The results are plotted below. 
+
+[https://lh3.googleusercontent.com/-786mdxcFiFw/Tk-HwRh25GI/AAAAAAAAAMM/rE5xc6ngnv0/s800/1dappxscreen.png]
+_Console showing db3 5 level computation_
+
+[https://lh5.googleusercontent.com/-wAxR0xM5I38/Tk9_iWhol_I/AAAAAAAAAL4/C9Sck_VZ7Ms/s912/1ddwtsig.png]
+_Length 256 Piecewise Regular signal from WaveLab_
+
+In Linear Approximation case, only first 100 coefficients are retained. Others are set to zero.
+
+[https://lh3.googleusercontent.com/-WIIVJSzPjJI/Tk-HwGSTXxI/AAAAAAAAAMI/kzHzVRuIqeY/s912/linsigcoeff.png]
+_Retained Coefficients for Linear Approximation case_
+
+[https://lh5.googleusercontent.com/-vo62gHChC0U/Tk-HvyiCgyI/AAAAAAAAAMA/NrpX9FBIOXU/s912/1dlinappx.png]
+_Reconstructed Signal using Linear Approximation_
+
+In Non-Linear case, largest 100 coefficients are retained.
+
+[https://lh3.googleusercontent.com/-2hvwAm8QTyU/Tk-HvuIZwjI/AAAAAAAAAL8/LxS0wb_IFOk/s912/nonlinsigcoeff.png]
+_Retained Coefficients(Non-Linear Approximation case_
+
+[https://lh4.googleusercontent.com/-OCLIjzcaO7U/Tk-Hv2ClRaI/AAAAAAAAAME/C-0CzXX8moI/s912/1dnlappx.png]
+_Reconstructed Signal(Non-Linear Approximation Case)_
