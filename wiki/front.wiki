@@ -22,6 +22,8 @@ Focus is on speed.
 
 3. Periodic and Symmetric functions take same arguments. They will still be accessed by the same names, though.(dwt ,dwt_sym etc.) 
 
+4. Focus on shared libraries. No static libraries for MSVC++ although MinGW and LINUX version will come with static as well as shared libraries.
+
 
 ||*[http://code.google.com/p/wavelet1d/wiki/newfunc List of Functions]*|| Lists all Functions available in the Library||
 ||*[http://code.google.com/p/wavelet1d/wiki/new1DDWTdemo Example Code 1]*|| 1D DWT/IDWT Demo Code||
