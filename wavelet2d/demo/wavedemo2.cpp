@@ -4,7 +4,8 @@
 // Version     :
 // Copyright   : 
 // Description : Wavelet Demo comparing linear and non-linear approximation properties
-//             : of a given wavelet. Implemented using dwt_sym and idwt_sym.
+//             : of a given wavelet. Implemented using dwt and idwt. Interchangeable with
+//             : dwt_sym and idwt_sym.
 //============================================================================
 
 #include <iostream>
