@@ -179,3 +179,18 @@ int main() {
 }
 
 }}}
+
+Three level Stationary Wavelet Transform is computed using db2 wavelet. Approximation coefficients are stored only for the final (J=3) stage while the three detail coefficients( Horizontal, Vertical and Diagonal) are stored for each value. All 10 sets of coefficients are 512X512.
+
+Input Image
+
+[https://lh5.googleusercontent.com/-Y78s7sxlRcM/TlAItad_y4I/AAAAAAAAANM/fKDn4Um6Awo/lena512.jpg]
+
+Approximation Coefficient at level J = 3
+
+[https://lh5.googleusercontent.com/-4E7Gtqj4MCs/TlAO_sX-kXI/AAAAAAAAANc/aXIMxdHv1Mw/blur.jpg]
+
+Detail Coefficients at Levels 3,2,1. Coefficients are arranged Horizontally,Vertically and Diagonally from top to bottom. 
+
+[https://lh5.googleusercontent.com/-vqsGaPY5Pf8/TlAPFwwtzcI/AAAAAAAAANg/lV8npKIy_qc/s512/detail.jpg]
+_Resized Image (Actual Dimensions 1536X1536)_
