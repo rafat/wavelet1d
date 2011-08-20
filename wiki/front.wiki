@@ -1,0 +1,13 @@
+=C++ 1D/2D DWT Implementation for Win32 and Linux=
+
+ # 1D DWT and IDWT Implementation (Two Modes)
+ # 2D DWT and IDWT Implementation (Two Modes)
+ # 1D SWT and ISWT Implementation ( Stationary Wavelet Transform)
+ # 2D SWT Implementation
+ # Implemented using FFTW3 Library
+ # Shared(*.so) and static(*.a) libraries for Linux
+ # Shared(*.dll) and static(*.a) libraries for Win32 GCC (MinGW).
+ # Shared(*.dll) libraries for Microsoft VC++
+
+
+  
