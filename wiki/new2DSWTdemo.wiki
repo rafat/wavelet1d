@@ -190,7 +190,8 @@ Approximation Coefficient at level J = 3
 
 [https://lh5.googleusercontent.com/-4E7Gtqj4MCs/TlAO_sX-kXI/AAAAAAAAANc/aXIMxdHv1Mw/blur.jpg]
 
-Detail Coefficients at Levels 3,2,1. Coefficients are arranged Horizontally,Vertically and Diagonally from top to bottom. 
+Detail Coefficients at Levels 3,2,1(L-R). Coefficients are arranged Horizontally,Vertically and Diagonally from top to bottom. 
 
 [https://lh5.googleusercontent.com/-vqsGaPY5Pf8/TlAPFwwtzcI/AAAAAAAAANg/lV8npKIy_qc/s512/detail.jpg]
+
 _Resized Image (Actual Dimensions 1536X1536)_
