@@ -209,3 +209,28 @@ Convolution function is pretty straightforward. _*a*_ and _*b*_ are input vector
 *14. Convolution* (Recommended if you are going to perform convolutions of same length hundreds or thousands of time in one program)*:* {{{double convfftm(vector<double> &a, vector<double> &b, vector<double> &c)}}}
 
 _*convfftm*_ is performed using MEASUREing capabilities of FFTW3 library so it is not recommended if you are going to convolve two vectors only once. This has some overhead but gives good results if multiple instances of same convolution are performed repeatedly. 
+
+==Wavelet Filters==
+
+*15. Filters:* {{{int filtcoef(string , vector<double> &, vector<double> &, vector<double> &, vector<double> &)}}}
+
+
+_*nm:*_ Wavelet name.
+
+_*lpd:*_ Low Pass Decomposition Filter Coefficients.
+
+_*hpd:*_ High Pass Decomposition Filter Coefficients.
+
+_*lpr:*_ Low Pass Reconstruction Filter Coefficients.
+
+_*hpr:*_ High Pass Reconstruction Filter Coefficients.
+
+All filters are {{{vector<double>}}} objects and can be obtained by specifying the wavelet name. Currently, following Wavelets are available:
+
+_*Daubechies :*_ db1,db2,.., ,db15
+
+_*Biorthogonal:*_ bior1.1 ,bior1.3 ,bior1.5 ,bior2.2 ,bior2.4 ,bior2.6 ,bior2.8 ,bior3.1 ,bior3.3 ,bior3.5 ,bior3.7 ,bior3.9 ,bior4.4 ,bior5.5 ,bior6.8
+
+_*Coiflets:*_ coif1,coif2,coif3,coif4,coif5
+
+_*Symmlets:*_ sym1,sym2,........, sym10
