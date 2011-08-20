@@ -14,6 +14,7 @@
 ||*[http://code.google.com/p/wavelet1d/wiki/newfunc List of Functions]*|| Lists all Functions available in the Library||
 ||*[http://code.google.com/p/wavelet1d/wiki/new1DDWTdemo Example Code 1]*|| 1D DWT/IDWT Demo Code||
 ||*[http://code.google.com/p/wavelet1d/wiki/new1DAppx Example Code 2]*|| 1D Signal Approximation Demo||
+||*[http://code.google.com/p/wavelet1d/wiki/new1DSWTDemo Example Code 6]*|| 1D SWT Demo Code||
 
 https://lh4.googleusercontent.com/-4w-fWQyoieo/Thn_s7qb8-I/AAAAAAAAAGs/B0HFvLru6CU/s512/empire.jpg
 
