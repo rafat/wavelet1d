@@ -234,3 +234,13 @@ _*Biorthogonal:*_ bior1.1 ,bior1.3 ,bior1.5 ,bior2.2 ,bior2.4 ,bior2.6 ,bior2.8 
 _*Coiflets:*_ coif1,coif2,coif3,coif4,coif5
 
 _*Symmlets:*_ sym1,sym2,........, sym10
+
+==1D Vector Manipulation==
+
+*16. Downsampling:* {{{void downsamp(vector<double> &sig, int M, vector<double> &sig_d)}}}
+
+_*sig*_ :: Signal to be Downsampled
+
+_*M*_ :: Downsampling factor
+
+_*sig_d*_ :: Downsampled signal
