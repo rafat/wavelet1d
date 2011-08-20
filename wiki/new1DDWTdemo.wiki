@@ -2,7 +2,11 @@
 
 _Notes
 
-# dwt and dwt_sym functions are interchangeable in the following code as they take the same arguments.
+1. dwt and dwt_sym functions are interchangeable in the following code as they take the same arguments.
+
+2. Please make sure that right header file is included. Following sample program links to wavelet2d.h which is the header for shared libraries. wavelet2s.h must be included for static libraries.
+
+[http://http://code.google.com/p/wavelet1d/wiki/1DDWTdemo Sample Code]
 
 {{{
 
