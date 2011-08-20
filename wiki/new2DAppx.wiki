@@ -341,3 +341,21 @@ int main() {
 }
 
 }}}
+
+This code decomposes a 512X512 grayscale image to 6 levels using db2 wavelets and uses a) only 10% coefficients and b) only 2% coefficients to reconstruct the image.
+
+Input Image 
+
+[https://lh5.googleusercontent.com/-Y78s7sxlRcM/TlAItad_y4I/AAAAAAAAANM/fKDn4Um6Awo/lena512.jpg]
+
+DWT of Input Image
+
+[https://lh6.googleusercontent.com/-un5jMZe5jWE/TlAIuMAx6cI/AAAAAAAAANQ/om0EtqX-mck/2dappxdwt.jpg]
+
+Image Approximation using only 10% coefficients 
+
+[https://lh6.googleusercontent.com/-wkhbPVWQk0g/TlAIsFBBL9I/AAAAAAAAANI/2BkdWP2mcgs/2dappxrecon.jpg]
+
+Image Approximation using only 2% coefficients.
+
+[https://lh4.googleusercontent.com/-LyvXNI1CUGE/TlAIw0icqgI/AAAAAAAAANY/0PIQ6Gz5HDQ/2dappxrecon2.jpg] 
