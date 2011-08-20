@@ -24,6 +24,7 @@ Focus is on speed.
 
 4. Focus on shared libraries. No static libraries for MSVC++ although MinGW and LINUX version will come with static as well as shared libraries.
  
+
 wavelet2d - dynamic libraries( .so and .dll)
 
 wavelet2s - static libraries (.a)
