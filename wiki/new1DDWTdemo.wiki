@@ -6,7 +6,7 @@ _Notes
 
 2. Please make sure that right header file is included. Following sample program links to wavelet2d.h which is the header for shared libraries. wavelet2s.h must be included for static libraries.
 
-[http://http://code.google.com/p/wavelet1d/wiki/1DDWTdemo Sample Code]
+[http://code.google.com/p/wavelet1d/source/browse/trunk/wavelet2d/demo/wavedemo1.cpp Sample Code]
 
 {{{
 
