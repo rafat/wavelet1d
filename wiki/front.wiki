@@ -16,11 +16,12 @@
 
 Focus is on speed.
 
-# FFTW3 Library is used to improve computation speed.
+1. FFTW3 Library is used to improve computation speed.
 
-# No GNUPLOT outputs are generated.
- 
-# Periodic and Symmetric functions take same arguments. They will still be accessed by the same names, though.(dwt ,dwt_sym etc.) 
+2. No GNUPLOT outputs are generated.
+
+3. Periodic and Symmetric functions take same arguments. They will still be accessed by the same names, though.(dwt ,dwt_sym etc.) 
+
 
 ||*[http://code.google.com/p/wavelet1d/wiki/newfunc List of Functions]*|| Lists all Functions available in the Library||
 ||*[http://code.google.com/p/wavelet1d/wiki/new1DDWTdemo Example Code 1]*|| 1D DWT/IDWT Demo Code||
