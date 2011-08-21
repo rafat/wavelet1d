@@ -61,7 +61,7 @@ and you are set.
 and libwavelet2s.a (static) compiled essentially from the same source code.
 Source code is available in the ’src’ folder.
 
-2. You may need to link to header files that are included with their resepctive libraries. They are also available in the ’src’ folder.
+2. You may need to link to header files that are included with their respective libraries. They are also available in the ’src’ folder.
 
 3. You may want to install shared library in one of your existing paths to
 make compilation easier. You can create sym links once inside the folder(
