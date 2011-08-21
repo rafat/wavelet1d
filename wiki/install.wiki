@@ -38,8 +38,11 @@ versions of wavelet2d DLLs and wavelet2s static libraries. Required Files for
 MinGW DLLS-
 
 • Header Files- wavelet2d.h
+
 • Import Library- libwavelet2d.dll.a
+
 • Wavelet DLL - wavelet2d.dll
+
 • FFTW DLL - libfftw3-3.dll (Import library is also included)
 
 It is recommended that you link to the Release and Debug folders as they are.
@@ -64,18 +67,23 @@ Source code is available in the ’src’ folder.
 make compilation easier. You can create sym links once inside the folder(
 say /usr/local/lib) by using following commands
 
-• ln -sf libwavelet2d.so.1.0 libwavelet2d.so
-• ln -sf libwavelet2d.so.1.0 libwavelet2d.so.1
-• ldconfig
+ ln -sf libwavelet2d.so.1.0 libwavelet2d.so
+
+ ln -sf libwavelet2d.so.1.0 libwavelet2d.so.1
+
+ ldconfig
 
 You will probably need superuser privileges to perform previous steps. If you
 don’t have su privilege then you can move libwavelet2d.so.1.0 to your work
 folder or where your source code is, create sym links as before and then put
 your folder in the path during runtime.
 
-• ln -sf libwavelet2d.so.1.0 libwavelet2d.so
-• ln -sf libwavelet2d.so.1.0 libwavelet2d.so.1
-• export LD_LIBRARY_PATH=.
+ln -sf libwavelet2d.so.1.0 libwavelet2d.so
+
+ln -sf libwavelet2d.so.1.0 libwavelet2d.so.1
+
+export LD_LIBRARY_PATH=.
+
 
 libwavelet2s.a :: Working with static library is pretty straightforward. You will
 only need to include wavelet2s.h in your program and specify the library
