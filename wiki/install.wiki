@@ -5,10 +5,13 @@
 This package contains two DLLs for MSVC++ - one Debug and one Release
 version.The list of required files in order to compile wavelet2d based programs-
 
-• Header File- wavelet2d.h
-• Import Library- wavelet2d.lib
-• Wavelet DLL - wavelet2d.dll
-• FFTW DLL - libfftw3-3.dll
+#Header File- wavelet2d.h
+
+#Import Library- wavelet2d.lib
+
+#Wavelet DLL - wavelet2d.dll
+
+#FFTW DLL - libfftw3-3.dll
 
 Header file is in the source (’src’) folder. Wavelet Libraries are in the respective Debug and Release folders. FFTW DLL is in the FFTW3 folder. Alternatively, you may chose to install FFT library from www.fftw.org. The FFTW sourcecodes are also available at FFTW website under GNU-GPL license.
 
