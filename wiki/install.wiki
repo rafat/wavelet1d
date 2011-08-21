@@ -65,7 +65,7 @@ Source code is available in the ’src’ folder.
 
 3. You may want to install shared library in one of your existing paths to
 make compilation easier. You can create sym links once inside the folder(
-say /usr/local/lib) by using following commands
+eg., /usr/local/lib where you are installing libwavelet2d.so.1.0) by using following commands
 
  ln -sf libwavelet2d.so.1.0 libwavelet2d.so
 
