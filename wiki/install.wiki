@@ -54,7 +54,7 @@ Working with MinGW Static libraries is even more straightforward. You
 need to include wavelet2s.h header in your program , link to static .a library and you are set.
 
 *Known Issue - Some newer versions of MinGW-g++ compiler have problem 
-working with *.o codes(and hence static libraries) compiled in older versions of MinGW (3.x). If you are facing this problem try MINGW4.5 compiled static libraries or build wavelet2d from the source code with your own compiler. You'll need to statically build fftw3 library first if you are going the source code way. The DLLs should be working fine in any case so that's always another option.*
+working with .o codes(and hence static libraries) compiled in older versions of MinGW (3.x). If you are facing this problem try MINGW4.5 compiled static libraries or build wavelet2d from the source code with your own compiler. You'll need to statically build fftw3 library first if you are going the source code way. The DLLs should be working fine in any case so that's always another option.*
 
 
 ==Working in LINUX Environment==
