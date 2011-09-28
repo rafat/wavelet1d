@@ -87,7 +87,8 @@ int main() {
    cout << "LOOP OK" << endl;
 
    int row,col;
-   dwt_output_dim(vec1, row, col );
+   row=vec1.size();
+   col=vec1[0].size();
 
    // Extract and Display Low Pass Image at the Jth stage
 
