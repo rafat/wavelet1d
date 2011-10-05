@@ -212,7 +212,7 @@ _*convfftm*_ is performed using MEASUREing capabilities of FFTW3 library so it i
 
 ==Wavelet Filters==
 
-*15. Filters:* {{{int filtcoef(string , vector<double> &, vector<double> &, vector<double> &, vector<double> &)}}}
+*15. Filters:* {{{int filtcoef(string nm, vector<double> &lpd, vector<double> &hpd, vector<double> &lpr, vector<double> &hpr)}}}
 
 
 _*nm:*_ Wavelet name.
@@ -233,7 +233,7 @@ _*Biorthogonal:*_ bior1.1 ,bior1.3 ,bior1.5 ,bior2.2 ,bior2.4 ,bior2.6 ,bior2.8 
 
 _*Coiflets:*_ coif1,coif2,coif3,coif4,coif5
 
-_*Symmlets:*_ sym1,sym2,........, sym10
+_*Symmlets:*_ sym2,........, sym10
 
 ==1D Vector Manipulation==
 
