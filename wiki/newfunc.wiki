@@ -200,7 +200,7 @@ _*swt_output*_ is a 1D vector which is arranged the same way as DWT output vecto
 
 *12. Convolution FFT_ESTIMATE (Recommended):* {{{double convfft(vector<double> &a, vector<double> &b, vector<double> &c)}}}
 
-Convolution function is pretty straightforward. _*a*_ and _*b*_ are input vectors and _*c*_ is the convolution output. _*convfft*_ uses FFT so it gives better results in most cases than the regular fft which is implemented by _*convol*_ function. 
+Convolution function is pretty straightforward. _*a*_ and _*b*_ are input vectors and _*c*_ is the convolution output. _*convfft*_ uses FFT so it gives better results in most cases than the regular convolution which is implemented by _*convol*_ function. 
 
 
 *13. Convolution Direct* (Use it for only smaller vectors)*:* {{{double convol(vector<double> &a, vector<double> &b, vector<double> &c)}}}
