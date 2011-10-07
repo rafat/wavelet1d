@@ -274,3 +274,7 @@ _*vec1*_ is the input, _*rows_up*_ and _*cols_up*_ are row and column upsampling
 *22. 2D Periodic Extension:* {{{void* per_ext2d(vector<vector<double> > &signal,vector<vector<double> > &temp2, int a)}}}
 
 _*signal*_ is extended by _*a_* in all directions and the result is returned in 2D vector _*temp2*_
+
+*22. 2D Symmetric Extension:* {{{void* symm_ext2d(vector<vector<double> > &signal,vector<vector<double> > &temp2, int a)}}}
+
+_*signal*_ is extended by _*a_* in all directions and the result is returned in 2D vector _*temp2*_
