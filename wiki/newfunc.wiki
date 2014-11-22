@@ -106,7 +106,6 @@ _*length*_ :: _Length vector obtained from the DWT computations_
 
  All the coefficients are of equal lengths and that value is stored in _*length*_. _*swt_output*_ stores value in the same format as _*dwt*_ and _*dwt_sym*_ functions - Approximation coefficient vector at level J is stored at the beginning of the *swt_output* vector followed by detail coefficients vectors at levels J, J-1,...., 1. The signal length has to be divisible by 2^J for reliable results. You can use signal extension (see below) to make the lengths compatible with the SWT.
 
-[https://lh6.googleusercontent.com/-LrlkA6bwApU/Tk7QyJDP7LI/AAAAAAAAALU/tJCOQXWxpiE/s912/swtscreen.png]
 _Two Level SWT Decomposition of a 247 length signal vector_
 
 *6. ISWT:* {{{void* iswt(vector<double> &swtop,int J, string nm, vector<double> &iswt_output)}}}
