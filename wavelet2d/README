@@ -1,0 +1,4 @@
+This git repository does not contain the FFTW package. It is recommended that you download the full working packages
+for windows and linux from http://wavelet2d.sourceforge.net and https://sourceforge.net/projects/wavelet2d/files/. 
+Alternatively, you can clone this git repository and build the FFTW package on yout computer. See documentation at 
+https://sourceforge.net/projects/wavelet2d/files/
